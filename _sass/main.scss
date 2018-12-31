@@ -2,19 +2,21 @@
   color: green;
 }
 body {
-  background-color: #b7c3f4;
-  color: #434344;
+  background-color: #FCFAFA;
   font-family: 'Roboto', sans-serif;
   padding: 0px;
   margin: 0px;
+  color: #6E8387;
 }
 
 h1, h2, h3, h4{
+  color: #95A4A7;
   font-weight: 300;
   letter-spacing:0.02em;
+  font-variant: small-caps;
 }
 
-p {
+p, li {
   font-weight: 300;
   letter-spacing:0.05em;
   line-height: 1.4em;
