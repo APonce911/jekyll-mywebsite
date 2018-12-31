@@ -16,7 +16,20 @@ h1, h2, h3, h4{
   font-variant: small-caps;
 }
 
-p, li {
+p, li, a {
   font-weight: 400;
   line-height: 1.4em;
+}
+.navbar{
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0px 60px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width:17%;
 }
