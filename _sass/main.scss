@@ -4,4 +4,19 @@
 body {
   background-color: #b7c3f4;
   color: #434344;
+  font-family: 'Roboto', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3, h4{
+  font-weight: 300;
+  letter-spacing:0.02em;
+}
+
+p {
+  font-weight: 300;
+  letter-spacing:0.05em;
+  line-height: 1.4em;
+
 }
