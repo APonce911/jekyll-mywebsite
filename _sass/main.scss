@@ -2,18 +2,23 @@
   color: green;
 }
 body {
+  left:0;
+  top:0;
   background-color: #FCFAFA;
   font-family: 'Roboto', sans-serif;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   color: #6E8387;
   letter-spacing:0.05em;
+  // width:100%;
+  // min-height:100vh;
 }
 
 h1, h2, h3, h4{
   color: #95A4A7;
   font-weight: 400;
   font-variant: small-caps;
+  margin-bottom:0
 }
 
 p, li, a {
@@ -32,4 +37,14 @@ p, li, a {
   align-items: center;
   justify-content: space-between;
   min-width:17%;
+}
+.wrapper{
+// min-height: calc(100vh - 90px);
+min-height:100vh;
+border: 0px;
+padding:0px;
+margin-bottom: -90px;
+}
+.push{
+  height: 90px;
 }
