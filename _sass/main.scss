@@ -26,16 +26,24 @@ p, li, a {
   line-height: 1.4em;
 }
 .navbar{
+  margin-top:15px;
   display:flex;
   align-items: center;
   justify-content:space-between;
-  padding: 0px 60px;
+}
+.name{
+  margin: 0;
+  padding: 0;
 }
 .tabs {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-width:17%;
+  // align-self:center;
+  margin: 0;
+  padding: 0;
+
 }
 .wrapper{
 // min-height: calc(100vh - 90px);
@@ -67,4 +75,4 @@ margin-bottom: -90px;
   .container {
     width: 1170px;
   }
-
+}
