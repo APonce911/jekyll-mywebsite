@@ -31,7 +31,6 @@ p, li, a {
   justify-content:space-between;
   padding: 0px 60px;
 }
-
 .tabs {
   display: flex;
   align-items: center;
@@ -47,4 +46,10 @@ margin-bottom: -90px;
 }
 .push{
   height: 90px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
