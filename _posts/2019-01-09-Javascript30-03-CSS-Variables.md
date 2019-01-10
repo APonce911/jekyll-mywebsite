@@ -3,8 +3,7 @@
 title:  "Javascript30 Challenge 03 - CSS Variables & JS"
 date:   2019-01-09 17:18:00
 ---
-Javascript30 Challenge 03 - CSS Variables & JS
-Objetivo: Fazer inputs no browser alterar CSS dinamicamente.
+Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pelo browser.
 
 Diferenças entre solução WesBos & minha:
 - CSS variables foram definidas com nome diferentes, e também alterei os nomes no HTML.
