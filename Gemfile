@@ -22,5 +22,5 @@ group :jekyll_plugins do
 
 end
 
-gem "rack-jekyll"
+# gem "rack-jekyll"
 gem "rake"
