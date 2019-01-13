@@ -8,7 +8,7 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  color: #6E8387;
+  color: $dark-grey;
   letter-spacing:0.05em;
   // width:100%;
   // min-height:100vh;
@@ -43,7 +43,9 @@ p, li, a {
   font-size: 1rem;
   text-align:justify;
 }
+a{
 
+}
 .navbar{
   margin-top:15px;
   display:flex;
