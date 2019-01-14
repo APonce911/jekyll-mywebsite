@@ -57,3 +57,4 @@ defaults:
 host: 0.0.0.0
 
 livereload: true
+permalink: /:title
