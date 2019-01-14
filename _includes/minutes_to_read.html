@@ -1,0 +1,9 @@
+<!-- 180 words p/ min -->
+
+{% assign words = content | number_of_words %}
+
+{% if words < 360 %}
+  {% assign time_to_read = '1 min'%}
+{% else %}
+  {% assign time_to_read =  words | divided_by:180 | append: 'mins' %}
+{%endif%}
