@@ -57,26 +57,6 @@ a{
 a:hover{
   box-shadow: inset 0px -2px $green;
 }
-.navbar{
-  margin-top:15px;
-  display:flex;
-  align-items: center;
-  justify-content:space-between;
-}
-.name{
-  margin: 0;
-  padding: 0;
-}
-.tabs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width:17%;
-  // align-self:center;
-  margin: 0;
-  padding: 0;
-
-}
 .wrapper{
 // min-height: calc(100vh - 90px);
 min-height:calc(100vh - 15px);
