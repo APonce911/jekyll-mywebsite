@@ -1,5 +1,4 @@
 .navbar{
-  // margin-top:15px;
   display:flex;
   align-items: baseline;
   justify-content:space-between;
@@ -14,7 +13,9 @@
   align-items: center;
   justify-content: space-between;
   min-width:17%;
-  // align-self:center;
   margin: 0;
   padding: 0;
+}
+.tabs a{
+  margin: 5px;
 }
