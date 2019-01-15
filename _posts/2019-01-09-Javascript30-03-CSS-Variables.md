@@ -66,5 +66,5 @@ segue função de atuaização do wes:
     }
 
 Links dos repositórios no github:
-<a href="https://github.com/APonce911/javascript30/tree/master/03-CSS-variables">Meu Código</a>,<a href="https://github.com/wesbos/JavaScript30/blob/master/03%20-%20CSS%20Variables/index-FINISHED.html"> do Wes</a>.
+<a href="https://github.com/APonce911/javascript30/tree/master/03-CSS-variables" target="_blank">Meu Código</a>,<a href="https://github.com/wesbos/JavaScript30/blob/master/03%20-%20CSS%20Variables/index-FINISHED.html"  target="_blank"> do Wes</a>.
 
