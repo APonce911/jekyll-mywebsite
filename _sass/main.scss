@@ -11,8 +11,6 @@ body {
   margin: 0;
   color: $dark-grey;
   letter-spacing:0.05em;
-  // width:100%;
-  // min-height:100vh;
 }
 
 h1, h2, h3, h4{
@@ -58,7 +56,6 @@ a:hover{
   box-shadow: inset 0px -2px $green;
 }
 .wrapper{
-// min-height: calc(100vh - 90px);
 // min-height:calc(100vh - 15px);
 min-height:100vh;
 border: 0px;
@@ -68,27 +65,6 @@ margin-bottom: -90px;
 .push{
   height: 90px;
 }
-// .container {
-//   padding-right: 15px;
-//   padding-left: 15px;
-//   margin-right: auto;
-//   margin-left: auto;
-// }
-// @media (min-width: 768px) {
-//   .container {
-//     width: 750px;
-//   }
-// }
-// @media (min-width: 992px) {
-//   .container {
-//     width: 970px;
-//   }
-// }
-// @media (min-width: 1200px) {
-//   .container {
-//     width: 1170px;
-//   }
-// }
 .container {
     max-width: 38rem;
     padding: 2rem 1.5rem;
@@ -107,17 +83,3 @@ margin-bottom: -90px;
   box-shadow: inset 0px -2px $green;
 }
 
-// .row {
-//   margin-right: -15px;
-//   margin-left: -15px;
-// }
-
-// .row:before,
-// .row:after {
-//   display: table;
-//   content: " ";
-// }
-
-// .row:after {
-//   clear: both;
-// }

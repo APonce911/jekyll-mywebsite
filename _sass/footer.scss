@@ -2,9 +2,7 @@
   background: #F4F4F4;
   display: flex;
   align-items: center;
-  // justify-content: space-between;
   height: 90px;
-  // padding: 0px 15px;
   margin: 0px;
   border: 0px;
   color: rgba(0,0,0,0.3);
@@ -13,14 +11,10 @@
   right:0;
   flex-direction:column;
   justify-content: center;
-
-  // width:100%;
-  // position:absolute;
 }
 .footer-links {
   display: flex;
   align-items: center;
-  // padding: 1rem 0.5rem;
 }
 .footer-links a {
   color: black;
@@ -38,6 +32,5 @@
   text-align: right ;
   opacity: 0.60;
   flex-shrink: 1;
-  // padding: 1rem 0.5rem;
 }
 
