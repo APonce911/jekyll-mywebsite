@@ -41,6 +41,10 @@ p, li, a {
   font-size: 16px;
   font-size: 1rem;
   text-align:justify;
+
+}
+ul{
+  -webkit-padding-start: 21px;
 }
 li{
   margin-bottom:5px;
@@ -74,6 +78,9 @@ margin-bottom: -90px;
 @media (min-width: 38rem) {
   .container {
       padding: 3rem 1rem;
+    }
+    ul{
+      -webkit-padding-start: 40px;
     }
 }
 .social-media-links a{
