@@ -35,7 +35,7 @@ Diferenças entre a solução do Wes Bos e a minha:
       const suffix = this.dataset.sizing || '';
     </code></pre>
 
-1. Numero de Handlers nos event listeners.
+1. Número de Handlers nos event listeners.
 
     - Wes usou dois event handlers(change e mousemove) e iterou sobre o objeto ‘inputs’:
 
@@ -59,7 +59,7 @@ Diferenças entre a solução do Wes Bos e a minha:
 1. Definição de fallback function(s).
 
 
-    - Eu defini 3 fallback functions, uma para cara input:
+    - Eu defini 3 fallback functions, uma para cada input:
 
     <pre>
       <code>
@@ -78,7 +78,7 @@ Diferenças entre a solução do Wes Bos e a minha:
         }
       </code></pre>
 
-    - Wes definiu uma única função de fallback (handleUpdate) para todos os eventos, e usou um médoto de JS que não conhecia, o setProperty, segue função de atuaização do wes:
+    - Wes definiu uma única função de fallback (handleUpdate) para todos os eventos, e usou um método de JS que não conhecia, o setProperty, segue função de atualização do wes:
 
     <pre>
       <code>
