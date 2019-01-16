@@ -4,21 +4,23 @@ date: 2019-01-09 17:18:00
 ---
 Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pelo browser.
 
-Diferenças entre solução WesBos & minha:
-- CSS variables foram definidas com nome diferentes, e também alterei os nomes no HTML.
-- Wes definiu uma constante ‘inputs’ que contém todos os inputs do HTML5 em um nodeList:
-<pre>
-  const inputs = document.querySelectorAll('.controls input');
-</pre>
+Diferenças entre a solução do Wes Bos e a minha:
+1. CSS variables foram definidas com nome diferentes, e também alterei os nomes no HTML.
 
-e eu defini cada input como uma variável:
-<pre>
-  let spacing = document.getElementById('spacing');
-  let blur = document.getElementById('blur');
-  let base = document.getElementById('base');
-</pre>
+    - Wes definiu uma constante ‘inputs’ que contém todos os inputs do HTML5 em um nodeList:
+    <pre>
+      const inputs = document.querySelectorAll('.controls input');
+    </pre>
 
-- Wes definiu uma constante com ‘suffix’ e fallback ‘nil’.
+    - Eu defini cada input como uma variável:
+
+    <pre>
+      let spacing = document.getElementById('spacing');
+      let blur = document.getElementById('blur');
+      let base = document.getElementById('base');
+    </pre>
+
+1. Wes definiu uma constante com ‘suffix’ e fallback ‘nil’.
 <pre>
   const suffix = this.dataset.sizing || '';
 </pre>
