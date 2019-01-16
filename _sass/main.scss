@@ -46,6 +46,9 @@ p, li, a {
 ul{
   -webkit-padding-start: 21px;
 }
+ol{
+  -webkit-padding-start: 21px;
+}
 li{
   margin-bottom:5px;
 }
@@ -82,7 +85,9 @@ margin-bottom: -90px;
     ul{
       -webkit-padding-start: 40px;
     }
-}
+    ol{
+      -webkit-padding-start: 40px;
+    }}
 .social-media-links a{
   box-shadow: 0px 0px;
 }
