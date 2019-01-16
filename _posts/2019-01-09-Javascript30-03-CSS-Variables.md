@@ -21,9 +21,9 @@ Diferenças entre a solução do Wes Bos e a minha:
 
     <pre>
       <code>
-        let spacing = document.getElementById('spacing');
-        let blur = document.getElementById('blur');
-        let base = document.getElementById('base');
+      let spacing = document.getElementById('spacing');
+      let blur = document.getElementById('blur');
+      let base = document.getElementById('base');
       </code></pre>
 
 1. Wes definiu uma constante com ‘suffix’ e fallback ‘nil’, eu escrevi os sufixos manualmente.
@@ -61,30 +61,30 @@ Diferenças entre a solução do Wes Bos e a minha:
 
     <pre>
       <code>
-        function updateSpacing() {
-          image.style.marginTop = `${spacing.value}px`;
-          image.style.marginLeft = `${spacing.value}px`;
-          console.log(spacing.value);
-        }
-        function updateBlur() {
-          image.style.filter = `blur(${blur.value}px)`;
-          console.log(blur.value);
-        }
-        function updateBase() {
-          document.body.style.background = base.value;
-          console.log(base.value);
-        }
+      function updateSpacing() {
+        image.style.marginTop = `${spacing.value}px`;
+        image.style.marginLeft = `${spacing.value}px`;
+        console.log(spacing.value);
+      }
+      function updateBlur() {
+        image.style.filter = `blur(${blur.value}px)`;
+        console.log(blur.value);
+      }
+      function updateBase() {
+        document.body.style.background = base.value;
+        console.log(base.value);
+      }
       </code></pre>
 
     Wes definiu uma única função de fallback (handleUpdate) para todos os eventos, e usou um método de JS que não conhecia, o setProperty, segue função de atualização do wes:
 
     <pre>
       <code>
-     function handleUpdate() {
+      function handleUpdate() {
         const suffix = this.dataset.sizing || '';
         document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
       }
-    </code></pre>
+      </code></pre>
 
 
 Links dos repositórios no github:
