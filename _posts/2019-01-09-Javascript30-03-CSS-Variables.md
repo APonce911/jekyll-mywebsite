@@ -10,14 +10,14 @@ Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pe
 Diferenças entre a solução do Wes Bos e a minha:
 1. Definição de objetos \<input> no Javascript.
 
-    - Wes definiu uma constante ‘inputs’ que contém todos os inputs do HTML5 em um nodeList:
+    Wes definiu uma constante ‘inputs’ que contém todos os inputs do HTML5 em um nodeList:
 
     <pre>
       <code>
       const inputs = document.querySelectorAll('.controls input');
       </code></pre>
 
-    - Eu defini cada input como uma variável:
+    Eu defini cada input como uma variável:
 
     <pre>
       <code>
@@ -28,8 +28,6 @@ Diferenças entre a solução do Wes Bos e a minha:
 
 1. Wes definiu uma constante com ‘suffix’ e fallback ‘nil’, eu escrevi os sufixos manualmente.
 
-    - Wes:
-
     <pre>
       <code>
       const suffix = this.dataset.sizing || '';
@@ -37,7 +35,7 @@ Diferenças entre a solução do Wes Bos e a minha:
 
 1. Número de Handlers nos event listeners.
 
-    - Wes usou dois event handlers(change e mousemove) e iterou sobre o objeto ‘inputs’:
+    Wes usou dois event handlers(change e mousemove) e iterou sobre o objeto ‘inputs’:
 
     <pre>
       <code>
@@ -45,7 +43,7 @@ Diferenças entre a solução do Wes Bos e a minha:
       inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
     </code></pre>
 
-    - Eu usei apenas um handler(change) para cada variável:
+    Eu usei apenas um handler(change) para cada variável:
 
     <pre>
       <code>
@@ -59,7 +57,7 @@ Diferenças entre a solução do Wes Bos e a minha:
 1. Definição de fallback function(s).
 
 
-    - Eu defini 3 fallback functions, uma para cada input:
+    Eu defini 3 fallback functions, uma para cada input:
 
     <pre>
       <code>
@@ -78,7 +76,7 @@ Diferenças entre a solução do Wes Bos e a minha:
         }
       </code></pre>
 
-    - Wes definiu uma única função de fallback (handleUpdate) para todos os eventos, e usou um método de JS que não conhecia, o setProperty, segue função de atualização do wes:
+    Wes definiu uma única função de fallback (handleUpdate) para todos os eventos, e usou um método de JS que não conhecia, o setProperty, segue função de atualização do wes:
 
     <pre>
       <code>
