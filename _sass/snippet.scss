@@ -4,24 +4,21 @@ pre {
   // display: block;
   // font-family: monospace;
   // white-space: pre;
-  // margin: 0.5em 0;
-  overflow: auto;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid $dark-grey;
   border-color: rgba(0,0,0,0.3);
-  border-radius: 3px;
+  // border-radius: 1px;
 }
 ::-webkit-scrollbar:horizontal {
   height: 8px;
   background-color: $light-grey;
 }
-
-// pre {
-//   width: 500px;                          /* specify width  */
-//   white-space: pre-wrap;                 /* CSS3 browsers  */
-//   white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
-//   white-space: -pre-wrap;                /* Opera 4 thru 6 */
-//   white-space: -o-pre-wrap;              /* Opera 7 and up */
-//   word-wrap: break-word;                 /* IE 5.5+ and up */
-//   /* overflow-x: auto; */                /* Firefox 2 only */
-//   /* width: 99%; */          /* only if needed */
-//   }
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.3);
+}
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: rgba(0,0,0,0.15);
+}
