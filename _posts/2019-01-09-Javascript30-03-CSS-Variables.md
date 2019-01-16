@@ -8,7 +8,7 @@ Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pe
 
 
 Diferenças entre a solução do Wes Bos e a minha:
-1. Definição de objetos \<input> no Javascript;
+1. Definição de objetos \<input> no Javascript.
 
     - Wes definiu uma constante ‘inputs’ que contém todos os inputs do HTML5 em um nodeList:
 
@@ -24,7 +24,7 @@ Diferenças entre a solução do Wes Bos e a minha:
       let base = document.getElementById('base');
     </pre>
 
-1. Wes definiu uma constante com ‘suffix’ e fallback ‘nil’, eu escrevi os sufixos manualmente;
+1. Wes definiu uma constante com ‘suffix’ e fallback ‘nil’, eu escrevi os sufixos manualmente.
 
     - Wes:
 
@@ -32,7 +32,7 @@ Diferenças entre a solução do Wes Bos e a minha:
       const suffix = this.dataset.sizing || '';
     </pre>
 
-1. Numero de Handlers nos event listeners;
+1. Numero de Handlers nos event listeners.
 
     - Wes usou dois event handlers(change e mousemove) e iterou sobre o objeto ‘inputs’:
 
@@ -51,7 +51,7 @@ Diferenças entre a solução do Wes Bos e a minha:
 
     (não sei porque ele utilizou o handler mousemove se o change já é o suficiente…)
 
-1. Definição de fallback function(s);
+1. Definição de fallback function(s).
 
 
     - Eu defini 3 fallback functions, uma para cara input:
