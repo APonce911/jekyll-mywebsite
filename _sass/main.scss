@@ -95,3 +95,28 @@ a:hover{
   box-shadow: inset 0px -2px $green;
 }
 
+.slide {
+  transition: left 0s .75s;
+  background-color:pink;
+}
+
+#slide:hover + .slide{
+    // left: 0;
+    // z-index: 100;
+    // transition: left 3s ease-out;
+  background-color:yellow;
+}
+.slide:hover{
+    // left: 0;
+    // z-index: 100;
+    // transition: left 3s ease-out;
+  background-color:yellow;
+
+}
+
+// @mixin bp($bp, $min-max: min-width) {
+//     $em: $bp/16;
+//     @media(#{$min-max}: #{$em}em) {
+//         @content;
+//     }
+// }
