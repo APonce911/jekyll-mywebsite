@@ -2,7 +2,7 @@
   <h3 class="name"><strong>Ponce</strong></h3>
   <nav class="tabs">
     {% for item in site.data.navigation %}
-      <h3><a href="{{ item.link }}" id="slide" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></h3>
+      <h3><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></h3>
     {% endfor %}
   </nav>
 </div>
