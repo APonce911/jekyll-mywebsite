@@ -2,7 +2,7 @@
   display:flex;
   align-items: baseline;
   justify-content:space-between;
-  margin-bottom:30px;
+  margin-bottom:40px;
 }
 .name{
   margin: 0;
@@ -28,4 +28,8 @@
   .name:before{
     content: 'Airton ';
   }
+  .navbar{
+    margin-bottom:60px;
+  }
+
 }
