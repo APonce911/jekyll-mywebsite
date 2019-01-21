@@ -100,5 +100,8 @@ a:hover{
   color: #95A4A7;
   font-weight: 400;
   font-variant: small-caps;
-  margin-bottom:0
+  margin-bottom:0px;
+  padding-bottom: 3px;
+  box-shadow: inset 0px -2px $light-green;
+
   }
