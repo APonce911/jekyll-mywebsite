@@ -4,7 +4,7 @@ date: 2019-01-09 17:18:00
 ---
 Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pelo browser.
 
- Veja <a href="https://aponce911.github.io/javascript30/03-CSS-variables/index.html" target="_blank">aqui</a>, como ficou minha versão do exercício.
+ Veja <a href="https://aponce911.github.io/javascript30/03-CSS-variables/index.html" target="_blank">aqui</a> como ficou minha versão do exercício.
 
 
 Diferenças entre a solução do Wes Bos e a minha:
