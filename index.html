@@ -6,7 +6,7 @@ title: APonce Blog
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="title-link">{{ post.title }}</a>
       <p>{{ post.excerpt }}</p>
     </li>
   {% endfor %}
