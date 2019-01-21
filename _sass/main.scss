@@ -61,6 +61,11 @@ a{
 a:hover{
   box-shadow: inset 0px -2px $green;
 }
+
+.external-link:hover{
+  cursor: cell;
+}
+
 .wrapper{
 // min-height:calc(100vh - 15px);
   min-height:100vh;
