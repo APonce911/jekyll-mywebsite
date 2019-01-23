@@ -7,9 +7,11 @@ lang: en
 
 <ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}" class="title-link">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
+    {% if post.lang == page.lang %}
+      <li>
+        <a href="{{ post.url }}" class="title-link">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
