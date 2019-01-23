@@ -2,7 +2,7 @@
 title: "Javascript30 desafio 03 - Variáveis CSS & JS"
 date: 2019-01-09 17:18:00
 post-ref: javascript30-challenge-03
-language: pt
+lang: pt
 
 ---
 Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pelo browser.
