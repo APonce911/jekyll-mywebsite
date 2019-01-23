@@ -1,8 +1,6 @@
-en:
-  label: English
-  name: en
+- name: English
+  code: en
   icon:
-pt:
-  label: Português
-  name: pt
+- name: Português
+  code: pt
   icon:

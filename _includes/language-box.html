@@ -1,1 +1,6 @@
-<div class="language-box">en | pt</div>
+<!-- <div class="language-box">en | pt</div> -->
+<div class="language-box">
+  {% for lang in site.data.languages %}
+    {{lang.code}}
+  {% endfor %}
+</div>
