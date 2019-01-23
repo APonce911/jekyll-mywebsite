@@ -7,7 +7,6 @@ comments: true
 <p>
   {{ page.date | date_to_string }} | <i class="far fa-clock"></i> {{ time_to_read}}
 </p>
-
 {{ content }}
 {% if layout.comments %}
   <h2><strong> E ai, gostou? Comenta aê!</strong></h2>
@@ -15,7 +14,7 @@ comments: true
   <script>
   var disqus_config = function () {
   this.page.url = '{{site.url}}{{site.baseurl}}{{page.url}}';
-  this.page.identifier = '{{page.title}}';
+  this.page.identifier = '{{page.post-ref}}';
   };
 
   (function() { // DON'T EDIT BELOW THIS LINE
