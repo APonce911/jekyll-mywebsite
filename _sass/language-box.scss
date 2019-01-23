@@ -1,0 +1,14 @@
+.language-box{
+  position: absolute;
+  margin:0;
+  top: 5px;
+  right: 5px;
+  font-variant: small-caps;
+}
+@media (min-width: 38rem) {
+  .language-box{
+    top: 15px;
+    right: 15px;
+  }
+}
+
