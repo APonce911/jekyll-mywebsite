@@ -2,6 +2,7 @@
 title:  "Post teste"
 date:   2019-01-14
 post-ref: test-post
+language:pt
 
 ---
 Esse eh apenas um post teste.
