@@ -50,11 +50,12 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "en_post"
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout:
+          en:  "en_default"
 host: 0.0.0.0
 
 livereload: true
