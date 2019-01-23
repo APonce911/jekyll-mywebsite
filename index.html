@@ -6,10 +6,11 @@ lang: en
 <h2>{{ site.data.translations['lastPosts'][page.lang] }}</h2>
 
 <ul>
-  {% for post in site.posts | where:"lang", page.lang %}
-    <li>
-      <a href="{{ post.url }}" class="title-link">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
+  {% assign posts = site.posts | where:"lang", page.lang %}
+  {% for post in posts %}
+      <li>
+        <a href="{{ post.url }}" class="title-link">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+      </li>
   {% endfor %}
 </ul>
