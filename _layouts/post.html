@@ -9,8 +9,7 @@ comments: true
 </p>
 {{ content }}
 {% if layout.comments %}
-  <!-- make the line bellow change depending on page.lang -->
-  <h2><strong> E ai, gostou? Comenta aê!</strong></h2>
+  <h2><strong>{{ site.data.translations['comment'][page.lang] }}</strong></h2>
   <div id="disqus_thread"></div>
   <script>
   var disqus_config = function () {
