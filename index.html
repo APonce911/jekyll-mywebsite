@@ -1,7 +1,9 @@
 ---
 title: APonce Blog
+lang: en
 ---
-<h2>Últimos Posts</h2>
+<!-- <h2>Últimos Posts</h2> -->
+<h2>{{ site.data.translations['lastPosts'][page.lang] }}</h2>
 
 <ul>
   {% for post in site.posts %}
