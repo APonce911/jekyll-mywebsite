@@ -1,3 +1,8 @@
 - js30:
-  en: "Javascript30 Challenge"
-  pt: "Desafio Javascript30"
+  en:
+    title: "Javascript30 Challenge"
+    excerpt: "30 pure JavaScript challenges. by WesBos"
+  pt:
+    title: "Desafio Javascript30"
+    excerpt: "30 desafios em Javascript puro. por WesBos"
+
