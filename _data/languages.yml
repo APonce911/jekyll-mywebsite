@@ -1,6 +1,21 @@
-- name: English
+en:
+  name: 'English'
   code: en
+  base: ''
   icon:
-- name: Português
+pt:
+  name: 'Português'
   code: pt
+  base: '/pt'
   icon:
+
+# - en:
+#   name: English
+#   code: en
+#   base: '/'
+#   icon:
+# - pt:
+#   name: Português
+#   code: pt
+#   base: pt
+#   icon:
