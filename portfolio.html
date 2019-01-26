@@ -13,8 +13,7 @@ lang: en
   {% assign works = site.data.portfolio %}
   {% for work in works %}
     <li><a href={{work.url}} target="_blank"  class="title-link external-link">{{ work.title[page.lang] }}</a></li>
-    <p>{{ work.excerpt[page.lang] }}
-    </p>
+    <p>{{ work.excerpt[page.lang] }}</p>
   {% endfor %}
 
     <li><a href="https://github.com/APonce911/api-documents-app" target="_blank" class="title-link external-link">API de microserviço</a></li>
