@@ -1,8 +1,15 @@
 - js30:
-  en:
-    title: "Javascript30 Challenge"
-    excerpt: "30 pure JavaScript challenges. by WesBos"
-  pt:
-    title: "Desafio Javascript30"
-    excerpt: "30 desafios em Javascript puro. por WesBos"
+  url: "https://aponce911.github.io/javascript30/"
+  title:
+    en: "Javascript30 Challenge"
+    pt: "Desafio Javascript30"
+  excerpt:
+    en: "30 pure JavaScript challenges. by WesBos"
+    pt: "30 desafios em Javascript puro. por WesBos"
 
+  # en:
+  #   title: "Javascript30 Challenge"
+  #   excerpt: "30 pure JavaScript challenges. by WesBos"
+  # pt:
+  #   title: "Desafio Javascript30"
+  #   excerpt: "30 desafios em Javascript puro. por WesBos"
