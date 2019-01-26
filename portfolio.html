@@ -6,9 +6,17 @@ lang: en
 <h2>{{ site.data.translations['myWorks'][page.lang] }}</h2>
 
 <ul>
-    <li><a href="https://aponce911.github.io/javascript30/" target="_blank"  class="title-link external-link">Javascript30 Challenge</a></li>
-    <p>Desafio com 30 exercícios de Javascript puro.
+    <!-- <li><a href="https://aponce911.github.io/javascript30/" target="_blank"  class="title-link external-link">Javascript30 Challenge</a></li> -->
+    <!-- <p>Desafio com 30 exercícios de Javascript puro. -->
+    <!-- </p> -->
+
+  {% assign works = site.data.portfolio %}
+  {% for work in works %}
+    <li><a href={{work.url}} target="_blank"  class="title-link external-link">{{ work.title[page.lang] }}</a></li>
+    <p>{{ work.excerpt[page.lang] }}
     </p>
+  {% endfor %}
+
     <li><a href="https://github.com/APonce911/api-documents-app" target="_blank" class="title-link external-link">API de microserviço</a></li>
     <p>Uma  Rest API de microserviço feita em Ruby on Rails para organizar contratos e solicitar assinaturas digitais pelo Clicksign.
     </p>
