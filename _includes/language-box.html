@@ -1,11 +1,15 @@
 <div class="language-box">
     {% assign lang = site.data.languages %}
-    <a href="{{site.url}}{{lang['en'].base}}{{page.url}}">{{ lang['en'].code }}</a> |
-    <a href="{{site.url}}{{lang['pt'].base}}{{page.url}}">{{ lang['pt'].code }}</a>
-  <p> {{page.url}} </p>
-  <p> {{page.post-ref}} </p>
-
+    <a href="{{site.url}}{{lang['en'].base}}">{{ lang['en'].code }}</a> |
+    <a href="{{site.url}}{{lang['pt'].base}}">{{ lang['pt'].code }}</a>
+  <p>page.url: {{page.url}} </p>
+  <p>site.base-url: {{ site.base-url }} </p>
+  <p>page.post-ref: {{page.post-ref}} </p>
+  <!-- {% if page.lang == 'en'%} -->
+  <!-- <p> {{page.lang}} </p> -->
+  <!-- {% endif%} -->
 </div>
+  <!-- <p> {{page.lang}}</p> -->
   <!-- {% for lang in site.data.languages %} -->
   <!-- {% endfor %} -->
   <!-- <p> {{site.baseurl}} </p> -->
