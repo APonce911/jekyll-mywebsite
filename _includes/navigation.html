@@ -3,7 +3,7 @@
   <nav class="tabs">
     {% for item in site.data.navigation %}
       <!-- <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}><h3>{{ item.name }}</h3></a> -->
-      <h3><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></h3>
+      <h3><a href="{{lang[page.lang].base}}{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></h3>
     {% endfor %}
   </nav>
 </div>
