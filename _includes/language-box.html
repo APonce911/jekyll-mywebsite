@@ -1,15 +1,14 @@
-<div class="language-box">
-  {% assign lang = site.data.languages %}
-  <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}" {% if page.lang == 'en' %}class="current"{% endif %}>{{ lang['en'].code }}</a> |
-  <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}" {% if page.lang == 'pt' %}class="current"{% endif %}>{{ lang['pt'].code }}</a>
+<!-- {# assign postsTrans = site.posts | where:"page-n-post-ref", page.page-n-post-ref | sort: 'lang' %} -->
+{% assign pages = site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% assign posts = site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% assign links = pages | plus: posts %}
 
-  {% assign postboolean = page.post-ref ) %}
+<div class="language-box">
+  <!-- {% assign lang = site.data.languages %} -->
+  <!-- <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}" {% if page.lang == 'en' %}class="current"{% endif %}>{{ lang['en'].code }}</a> | -->
+  <!-- <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}" {% if page.lang == 'pt' %}class="current"{% endif %}>{{ lang['pt'].code }}</a> -->
+  {% for link in links %}
+    <a href="{{ site.base-url }}{{ link.url }}">{{ link.lang }}</a>
+  {% endfor %}
 </div>
-  <!-- <p>{{ page}}</p> -->
-  <!-- <p>page.post-ref: {{page.post-ref}} </p> -->
-  <!-- <p>page.url: {{page.url}} </p> -->
-  <!-- <p>page.dir: {{page.dir}}</p> -->
-  <!-- <p>page.title: {{page.title}}</p> -->
-  <!-- <p>page.path: {{page.path}}</p> -->
-  <!-- <p>site.base-url: {{ site.base-url }}</p> -->
-  <!-- <p>post.url: {{ postPT.url }}</p> -->
+

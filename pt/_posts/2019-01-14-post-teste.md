@@ -1,8 +1,8 @@
 ---
 title:  "Post teste"
 date:   2019-01-14
-post-ref: test-post
 lang: pt
+ref: test-post
 
 ---
 Esse eh apenas um post teste.
