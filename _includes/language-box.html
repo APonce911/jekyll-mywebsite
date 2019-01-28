@@ -1,13 +1,15 @@
 <div class="language-box">
-    {% assign lang = site.data.languages %}
-    <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}">{{ lang['en'].code }}</a> |
-    <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}">{{ lang['pt'].code }}</a>
-  <p>page.url: {{page.url}} </p>
-  <p>page.dir: {{page.dir}}</p>
-  <p>page.title: {{page.title}}</p>
-  <!-- <p>page.path: {{page.path}}</p> -->
-  <p>site.base-url: {{ site.base-url }}</p>
-  <p>post.url: {{post.url}}</p>
+  {% assign lang = site.data.languages %}
+  <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}">{{ lang['en'].code }}</a> |
+  <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}">{{ lang['pt'].code }}</a>
 
+  {% assign postboolean = ( page.post-ref != nil ) %}
+  <p>{{ page.post-ref != nil }}</p>
 </div>
   <!-- <p>page.post-ref: {{page.post-ref}} </p> -->
+  <!-- <p>page.url: {{page.url}} </p> -->
+  <!-- <p>page.dir: {{page.dir}}</p> -->
+  <!-- <p>page.title: {{page.title}}</p> -->
+  <!-- <p>page.path: {{page.path}}</p> -->
+  <!-- <p>site.base-url: {{ site.base-url }}</p> -->
+  <!-- <p>post.url: {{ postPT.url }}</p> -->
