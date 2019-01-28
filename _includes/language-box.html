@@ -1,7 +1,7 @@
 <div class="language-box">
   {% assign lang = site.data.languages %}
-  <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}">{{ lang['en'].code }}</a> |
-  <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}">{{ lang['pt'].code }}</a>
+  <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}" {% if page.lang == 'en' %}class="current"{% endif %}>{{ lang['en'].code }}</a> |
+  <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}" {% if page.lang == 'pt' %}class="current"{% endif %}>{{ lang['pt'].code }}</a>
 
   {% assign postboolean = page.post-ref ) %}
 </div>
