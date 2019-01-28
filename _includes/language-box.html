@@ -1,14 +1,17 @@
-<!-- {# assign postsTrans = site.posts | where:"page-n-post-ref", page.page-n-post-ref | sort: 'lang' %} -->
-{% assign pages = site.pages | where:"ref", page.ref | sort: 'lang' %}
 {% assign posts = site.posts | where:"ref", page.ref | sort: 'lang' %}
-{% assign links = pages | plus: posts %}
+{% assign pages = site.pages | where:"ref", page.ref | sort: 'lang' %}
 
 <div class="language-box">
-  <!-- {% assign lang = site.data.languages %} -->
-  <!-- <a href="{{site.url}}{{lang['en'].base}}{{page.page-link}}" {% if page.lang == 'en' %}class="current"{% endif %}>{{ lang['en'].code }}</a> | -->
-  <!-- <a href="{{site.url}}{{lang['pt'].base}}{{page.page-link}}" {% if page.lang == 'pt' %}class="current"{% endif %}>{{ lang['pt'].code }}</a> -->
-  {% for link in links %}
-    <a href="{{ site.base-url }}{{ link.url }}">{{ link.lang }}</a>
-  {% endfor %}
+  {% if page.layout == "post" %}
+    {% for link in posts %}
+      <a href="{{ site.base-url }}{{ link.url }}">{{ link.lang }}</a>
+    {% endfor %}
+  {% elsif page.layout == "default" %}
+    {% for link in pages %}
+      <a href="{{ site.base-url }}{{ link.url }}">{{ link.lang }}</a>
+    {% endfor %}
+  {% endif %}
 </div>
+
+
 
