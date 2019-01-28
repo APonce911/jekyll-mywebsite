@@ -4,11 +4,11 @@
 <div class="language-box">
   {% if page.layout == "post" %}
     {% for link in posts %}
-      <a href="{{ site.base-url }}{{ link.url }}">{{ link.lang }}</a>
+      <a href="{{ site.base-url }}{{ link.url }}" {% if page.lang == link.lang %}class="current"{% endif %}>{{ link.lang }}</a>
     {% endfor %}
   {% elsif page.layout == "default" %}
     {% for link in pages %}
-      <a href="{{ site.base-url }}{{ link.url }}">{{ link.lang }}</a>
+      <a href="{{ site.base-url }}{{ link.url }}"{% if page.lang == link.lang %}class="current"{% endif %}>{{ link.lang }}</a>
     {% endfor %}
   {% endif %}
 </div>
