@@ -11,6 +11,7 @@ Objetivo: Fazer o Javascript alterar dinamicamente os inputs de CSS recebidos pe
 
 
 Diferenças entre a solução do Wes Bos e a minha:
+
 1. Definição de objetos \<input> no Javascript.
 
     Wes definiu uma constante ‘inputs’ que contém todos os inputs do HTML5 em um nodeList:

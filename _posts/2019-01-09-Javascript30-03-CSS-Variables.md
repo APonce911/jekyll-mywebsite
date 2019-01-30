@@ -11,6 +11,7 @@ Goal: To make the javascript change dynamically the page CSS with the inputs pas
 
 
 Difference between Wes Bos solution and mine:
+
 1. Defining the \<input> object on Javascript.
 
     Wes defined a constant 'inputs' which contains all HTML inputs in a nodeList:
@@ -28,3 +29,10 @@ Difference between Wes Bos solution and mine:
       let blur = document.getElementById('blur');
       let base = document.getElementById('base');
       </code></pre>
+
+1. Wes defined a 'suffix' constant and a 'nil' default value, I wrote manually each suffix.
+
+    <pre>
+      <code>
+      const suffix = this.dataset.sizing || '';
+    </code></pre>
