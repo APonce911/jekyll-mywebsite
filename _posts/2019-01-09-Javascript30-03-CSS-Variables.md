@@ -36,3 +36,24 @@ Difference between Wes Bos solution and mine:
       <code>
       const suffix = this.dataset.sizing || '';
     </code></pre>
+
+1. Number of handlers on event listeners.
+
+    Wes used two event handlers(change e mousemove) and iterated over the object ‘inputs’:
+
+    <pre>
+      <code>
+      inputs.forEach(input => input.addEventListener('change', handleUpdate));
+      inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+    </code></pre>
+
+    I used one handler(change) for each variable:
+
+    <pre>
+      <code>
+      spacing.addEventListener("change", updateSpacing);
+      blur.addEventListener("change", updateBlur);
+      base.addEventListener("change", updateBase);
+    </code></pre>
+
+    (I don't know why he used the 'mousemove' handler if the 'change' is enough ...)
