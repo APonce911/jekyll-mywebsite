@@ -7,7 +7,7 @@ ref: javascript30-challenge-03
 ---
 Goal: To make the javascript change dynamically the page CSS with the inputs passed through the browser.
 
- See <a href="https://aponce911.github.io/javascript30/03-CSS-variables/index.html" target="_blank" class="external-link">here</a> how is my version of the exercice.
+ See <a href="https://aponce911.github.io/javascript30/03-CSS-variables/index.html" target="_blank" class="external-link">here</a> how is my version of the exercise.
 
 
 Difference between Wes Bos solution and mine:
@@ -37,7 +37,7 @@ Difference between Wes Bos solution and mine:
       const suffix = this.dataset.sizing || '';
     </code></pre>
 
-1. Number of handlers on event listeners.
+1. The number of handlers on event listeners.
 
     Wes used two event handlers(change e mousemove) and iterated over the object ‘inputs’:
 
@@ -80,7 +80,7 @@ Difference between Wes Bos solution and mine:
       }
       </code></pre>
 
-    Wes defined a single fallback function (handleUpdate) for all events, and used a JS method that I didn't knew, the setProperty. Here is the his update function:
+    Wes defined a single fallback function (handleUpdate) for all events and used a JS method that I didn't know, the setProperty. Here is his update function:
 
     <pre>
       <code>
