@@ -3,8 +3,8 @@
   <h3 class="name"><strong>Ponce</strong></h3>
   <nav class="tabs">
     {% for item in site.data.navigation %}
-      <!-- <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}><h3>{{ item.name }}</h3></a> -->
-      <h3><a href="{{lang[page.lang].base}}{{ item.link }}" {% if page.page-link == item.link %}class="current"{% endif %}>{{ item.name }}</a></h3>
+      {% assign item_name = item.name | downcase %}
+      <h3><a href="{{lang[page.lang].base}}{{ item.link }}" {% if page.ref == item_name | downcase %}class="current"{% endif %}>{{ item.name }}</a></h3>
     {% endfor %}
   </nav>
 </div>
