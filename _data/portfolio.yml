@@ -1,3 +1,11 @@
+- ThisWebsite:
+  url: "https://airtonponce.com"
+  title:
+    en: "this.website"
+    pt: "this.website"
+  excerpt:
+    en: "Yes, this website. Seems simple, but i had to spend some good hours doing it(specially the dual language functionality lol)! Its a bread and butter, made with love using the Jekyll framework. I also had to learn the Liquid template engine & Markdown conversion tool. "
+    pt: "Sim, esse website. Parece simples, mas tive que gastar umas boas horas fazendo(especialmente a funcionalidade para dois idiomas lol)! Ele é um feijão com arroz, feito com muito carinho usando o framework Jekyll. Também tive que aprender a liguagem de template Liquid & a ferramenta de conversão Markdown. "
 - js30:
   url: "https://aponce911.github.io/javascript30/"
   title:
@@ -14,7 +22,7 @@
   excerpt:
     en: "A Ruby on Rails microservice Rest API to organize contracts and request digital signatures using ClickSign."
     pt: "Uma  Rest API de microserviço feita em Ruby on Rails para organizar contratos e solicitar assinaturas digitais pelo Clicksign."
-- API-Banfox:
+- MapaPaladar:
   url: "https://www.mapapaladar.com"
   title:
     en: "mapapaladar.com"
