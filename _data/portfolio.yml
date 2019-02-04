@@ -4,8 +4,8 @@
     en: "this.website"
     pt: "this.website"
   excerpt:
-    en: "Yes, this website. Seems simple, but i had to spend some good hours doing it(specially the dual language functionality lol)! Its a bread and butter, made with love using the Jekyll framework. I also had to learn the Liquid template engine & Markdown conversion tool. "
-    pt: "Sim, esse website. Parece simples, mas tive que gastar umas boas horas fazendo(especialmente a funcionalidade para dois idiomas lol)! Ele é um feijão com arroz, feito com muito carinho usando o framework Jekyll. Também tive que aprender a liguagem de template Liquid & a ferramenta de conversão Markdown. "
+    en: "Yes, this website. Seems simple, but I had to spend some good hours doing it (especially the dual language functionality lol)! It's a bread and butter, made with love using the Jekyll framework. I also had to learn the Liquid template engine & Markdown conversion tool. "
+    pt: "Sim, este website. Parece simples, mas tive que gastar umas boas horas fazendo (especialmente a funcionalidade para dois idiomas lol)! Ele é um feijão com arroz, feito com muito carinho usando o framework Jekyll. Também tive que aprender a linguagem de template Liquid & a ferramenta de conversão Markdown. "
 - js30:
   url: "https://aponce911.github.io/javascript30/"
   title:
