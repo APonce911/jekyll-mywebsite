@@ -14,6 +14,8 @@ Steps
 - Config your translations to your selected languages. mine EN/PT
 - Create a front matter 'lang' on your pages/posts to define in what language the file is rendered
 - Create a front matter 'ref' on your pages/posts to identify the sinbling pace. Use its value in your base langugae
+- Config permalink for pages (/about and pt/about) and do not define it for posts
+- on _config.yml use permalink: /:title
 - Create a language-box fix inside _includes/ and the respective .sass file to work as language selection buttons
 - refactor your code to get translated data from translations.yml;Test using the language buttons
 - Create a pt(your alternative language) folder with pages and _posts folder inside. All files must be translated or getting data dynamicaly from _data. File title should be in pt.
