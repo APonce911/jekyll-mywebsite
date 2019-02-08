@@ -14,7 +14,9 @@ After that, I went to Italy with my family, and I stayed there for aproximately 
 
 
 -o porque aprender programaçao
-B
+
+And when in São Paulo, I had to decide 'what to do now?'. I saw myself in a situation where I had lost all that old interest on the financial markets, and then I realized that my personal interests had shift.
+Now I was really curious and searching about tecnologies, start-ups and inovation.
 
 -como decidi a forma de aprender(facul x bootcamp x online)
 -como foi o bootcamp da wagon
