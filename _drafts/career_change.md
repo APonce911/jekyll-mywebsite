@@ -19,6 +19,9 @@ And when in São Paulo, I had to decide 'what to do now?'. I saw myself in a sit
 Now I was really curious and searching about tecnologies, start-ups and inovation.
 
 -como decidi a forma de aprender(facul x bootcamp x online)
+But how to get into this environment, with such a traditional backgroud? They are so different, not only the skillset required, but also the way these professionals think. It was a big jump.
+
+
 -como foi o bootcamp da wagon
 -pos curso. O que fiz(codava diariamente, rotina de estudo, aplicar pra vagas) e como me organizei
 -processos seletivos. Como foram as exigências? O que aprendi com eles? Pra mim, foi uma forma gratúita de ter feedbacks de pessoas mais senior e usava como combustivel para entrar com mais chances nos processos seguintes.
