@@ -4,6 +4,9 @@
 For the ones like me, who after a while performing the same task, on the same job, tought that career shift was impossible, or nealy impossible, here it is my testomony of how I did it.
 
 -Um pouco da minha experiencia profissional anterior
+
+I graduated in economics in 2012. On 2011 I started my interniship on the multimarks funds on Santander Asset Managgement, and since then I was making my career there. It was 6 long years, from intern to analyst and then portfolio manager. The team was shrinking and the responsabilities were growing.
+
 -o porque aprender programaçao
 -como decidi a forma de aprender(facul x bootcamp x online)
 -como foi o bootcamp da wagon
