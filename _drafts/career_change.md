@@ -1,6 +1,11 @@
 1. Minha mudança de carreira.
 -Um pouco da minha experiencia profissional anterior
 -o porque aprender programaçao
+
+Hi guys, here I will describe my career change.
+
+For some of you, like me, who tought career shift is impossible, or nealy impossible, here it is my testomony of how I did it.
+
 -como decidi a forma de aprender(facul x bootcamp x online)
 -como foi o bootcamp da wagon
 -pos curso. O que fiz(codava diariamente, rotina de estudo, aplicar pra vagas) e como me organizei
