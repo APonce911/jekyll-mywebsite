@@ -72,7 +72,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
       someOtherExpression
    </code>
   </pre>
-<!--  <h3>Top-level Definitions</h3>
-  the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition
- <h3>Packages and Imports</h3>
- -->
+ <h3>Top-level Definitions</h3>
+  the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
+ <!-- <h3>Packages and Imports</h3> -->
+
