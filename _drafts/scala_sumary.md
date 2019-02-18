@@ -116,3 +116,21 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
+ <h3>Automatic Imports</h3>
+
+  Any Scala application automatically imports the packages scala, java.lang and scala.Predef.
+ <h3>Writing Executable Programs</h3>
+  All executable applications should have a main method inside an object
+  <pre>
+   <code>
+    object Hello {
+      def main(args: Array[String]) = println("hello world!")
+    }
+   </code>
+  </pre>
+  and can be executed with the following code:
+  <pre>
+   <code>
+    $ scala Hello
+   </code>
+  </pre>
