@@ -134,3 +134,26 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     $ scala Hello
    </code>
   </pre>
+
+<h2>Tail Recursion</h2>
+ <h3>Recursive Function Application</h3>
+
+ Maximum Common Divisor
+
+ <pre>
+  <code>
+   def gcd(a: Int, b: Int): Int =
+     if (b == 0) a else gcd(b, a % b)
+  </code>
+ </pre>
+
+Factorial
+
+ <pre>
+  <code>
+   def factorial(n: Int): Int =
+     if (n == 0) 1 else n * factorial(n - 1)
+  </code>
+ </pre>
+
+MCD oscillates and Factorial extends the number of elements on its expression.
