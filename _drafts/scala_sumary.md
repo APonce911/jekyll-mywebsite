@@ -167,3 +167,17 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   What is the stack frame?
 
   Its possible to require that the following defined fuction is recursive using the @tailrec annotation. If the function were not tail recursive, it would pront an error.
+
+  Tail recursive factorial:
+  <pre>
+   <code>
+    def factorial(n: Int): Int = {
+      @tailrec
+      def iter(x: Int, result: Int): Int =
+        if (x == 1) result
+        else iter(x - 1, result * x)
+
+      iter(n,1)
+    }
+   </code>
+  </pre>
