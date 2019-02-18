@@ -138,22 +138,30 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 <h2>Tail Recursion</h2>
  <h3>Recursive Function Application</h3>
 
- Maximum Common Divisor
+  Maximum Common Divisor
 
- <pre>
-  <code>
-   def gcd(a: Int, b: Int): Int =
-     if (b == 0) a else gcd(b, a % b)
-  </code>
- </pre>
+  <pre>
+   <code>
+    def gcd(a: Int, b: Int): Int =
+      if (b == 0) a else gcd(b, a % b)
+   </code>
+  </pre>
 
-Factorial
+  Factorial
 
- <pre>
-  <code>
-   def factorial(n: Int): Int =
-     if (n == 0) 1 else n * factorial(n - 1)
-  </code>
- </pre>
+  <pre>
+   <code>
+    def factorial(n: Int): Int =
+      if (n == 0) 1 else n * factorial(n - 1)
+   </code>
+  </pre>
 
-MCD oscillates and Factorial extends the number of elements on its expression.
+  MCD oscillates and Factorial extends the number of elements on its expression.
+
+ <h3>Tail Recursion</h3>
+
+  Is when the last action of a method is to call itself. In case of the factorial method, its not tail recursive because after calling itself with factorial(n-1) it has to multiply to n.
+
+  "Both factorial and gcd only call itself but in general, of course, a function could call other functions. So the generalization of tail recursion is that, if the last action of a function consists of calling another function, maybe the same, maybe some other function, the stack frame could be reused for both functions. Such calls are called tail calls."
+
+  What is the stack frame?
