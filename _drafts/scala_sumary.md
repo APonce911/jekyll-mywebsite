@@ -165,3 +165,5 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   "Both factorial and gcd only call itself but in general, of course, a function could call other functions. So the generalization of tail recursion is that, if the last action of a function consists of calling another function, maybe the same, maybe some other function, the stack frame could be reused for both functions. Such calls are called tail calls."
 
   What is the stack frame?
+
+  Its possible to require that the following defined fuction is recursive using the @tailrec annotation. If the function were not tail recursive, it would pront an error.
