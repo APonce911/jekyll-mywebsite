@@ -62,4 +62,17 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
- <h3></h3>
+ <h3>Semicolons</h3>
+  In most cases semicolons are optional.
+  Used when you have two statements in a single line
+  When you have 2 long expressions, you can overcome implicit ';' by putting the expressions inside () or by putting the operator(+) on the first line.
+  <pre>
+   <code>
+    someLongExpression +
+      someOtherExpression
+   </code>
+  </pre>
+<!--  <h3>Top-level Definitions</h3>
+  the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition
+ <h3>Packages and Imports</h3>
+ -->
