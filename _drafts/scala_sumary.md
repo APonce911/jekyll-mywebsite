@@ -73,6 +73,46 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
  <h3>Top-level Definitions</h3>
-  the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
- <!-- <h3>Packages and Imports</h3> -->
 
+  the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
+ <h3>Packages and Imports</h3>
+  top level definitions can be organized an imported as packages
+
+  <pre>
+   <code>
+    // file foo/Baz.scala
+    package foo
+    object Baz {
+      Bar.someMethod
+      // Bar is visible because it is in the `foo` package too
+    }
+   </code>
+  </pre>
+
+  when some definitions are not visible, you must use fully qualified names to refer them:
+
+  <pre>
+   <code>
+    // file quux/Quux.scala
+    package quux
+    object Quux {
+      foo.Bar.someMethod
+    }
+   </code>
+  </pre>
+
+  here foo is a package(class?), Bar is an object and someMethod is a method
+
+  you can also import and object to not repeat them:
+
+  <pre>
+   <code>
+    // file quux/Quux.scala
+    package quux
+    import foo.Bar
+    object Quux {
+      // Bar refers to the imported `foo.Bar`
+      Bar.someMethod
+    }
+   </code>
+  </pre>
