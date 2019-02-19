@@ -225,6 +225,6 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
   Here, Alive(...) and Dead(...) are constructor patterns and name is called variable pattern.
 
- <!-- <h3>Exhaustivity</h3> -->
-
+ <h3>Exhaustivity</h3>
+   when not all cases of a Symbol are handled, the compiler informs us.
 
