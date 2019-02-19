@@ -224,7 +224,9 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
   Here, Alive(...) and Dead(...) are constructor patterns and name is called variable pattern.
-
  <h3>Exhaustivity</h3>
-   when not all cases of a Symbol are handled, the compiler informs us.
-
+  when not all cases of a Symbol are handled, the compiler informs us.
+ <h3>Equals</h3>
+   Comparing instances of case classes you compare their values.
+   This is different from Ruby classes, where each instance is different from other, even if its properties are equal.
+ <!-- <h3>Enumerations</h3> -->
