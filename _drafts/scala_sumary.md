@@ -242,11 +242,11 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     case object G extends NoteName
    </code>
   </pre>
-<!--  <h3>Algebraic Data Types</h3>
+ <h3>Algebraic Data Types</h3>
   if a part of a program can be formulated in terms of an <strong>is</strong> relationship, you will express it as a sealed trait:
   “A symbol is either a note or a rest.”
 
   if it can be formulated in terms of an  <strong>has</strong> relationship,you will express it as a case class:
 
   “A note has a name, a duration and an octave number.”
- -->
+
