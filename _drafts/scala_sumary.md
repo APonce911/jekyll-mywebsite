@@ -263,5 +263,32 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
  <h3>Motivation</h3>
   its possible to factor out various recursive higher-order functions.
+  Examples:
 
- <!-- <h3>Summing with higher-order functions</h3> -->
+  b>a
+
+  Sum all integers between a and b
+  <pre>
+   <code>
+    def sumInts(a: Int, b: Int): Int =
+      if (a > b) 0 else a + sumInts(a + 1, b)
+   </code>
+  </pre>
+  Sum the cubes of all the integers between a and b
+  <pre>
+   <code>
+    def cube(x: Int): Int = x * x * x
+
+    def sumCubes(a: Int, b: Int): Int =
+      if (a > b) 0 else cube(a) + sumCubes(a + 1, b)
+   </code>
+  </pre>
+  Sum the factorials of all the integers between a and b
+  <pre>
+   <code>
+    def sumFactorials(a: Int, b: Int): Int =
+      if (a > b) 0 else factorial(a) + sumFactorials(a + 1, b)
+   </code>
+  </pre>
+
+ <h3>Summing with higher-order functions</h3>
