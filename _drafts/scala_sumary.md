@@ -290,7 +290,6 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
       if (a > b) 0 else factorial(a) + sumFactorials(a + 1, b)
    </code>
   </pre>
-
  <h3>Summing with higher-order functions</h3>
   the functions above can be summarized passing the respective function (id/cube/factorial) as a parameter to a higher order function (sum).
 
@@ -310,4 +309,37 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     def sumFactorials(a: Int, b: Int) = sum(factorial, a, b)
    </code>
   </pre>
+ <h3>Functions Types</h3>
+  A => B
+  A argument
+  returns B
+ <h3>Anonymous Functions</h3>
+  Function literal. i.e. dont need to define a name for it
+  Anonymous cube function:
+  <pre>
+   <code>
+    (x: int) => x * x * x
+   </code>
+  </pre>
 
+  (...) is the parameter
+   x * x * x is the body
+  the type of the parameter can be omitted. Multiple parameters are separated by commas.
+
+  <h3>Syntactic Sugar</h3>
+   are functions defined as below:
+   why they are used? I don't know...
+   <pre>
+    <code>
+     { def funcName(x1: T1, …, xn: Tn) = e ; funcName }
+    </code>
+   </pre>
+
+  <h3>Summation with Anonymous Functions</h3>
+   the respective functions(id/cube) are not defined and passed as parameters anymore. They are passed as literals on the higher order function (sum).
+   <pre>
+    <code>
+     def sumInts(a: Int, b: Int) = sum(x => x, a, b)
+     def sumCubes(a: Int, b: Int) = sum(x => x * x * x, a, b)
+    </code>
+   </pre>
