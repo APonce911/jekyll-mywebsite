@@ -251,10 +251,17 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   if it can be formulated in terms of an  <strong>has</strong> relationship,you will express it as a case class:
 
   “A note has a name, a duration and an octave number.”
-
  <h3>Observations</h3>
- case class != case object
+  case class != case object
 
- case class is used to define a class(name, properties and parent(extends ...))
- case object is used to restrict the values of a property
+  case class is used to define a class(name, properties and parent(extends ...))
+  case object is used to restrict the values of a property
 
+<h2>Higher-Order Functions</h2>
+ <h3>Higher-Order Functions</h3>
+
+   On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
+ <h3>Motivation</h3>
+  its possible to factor out various recursive higher-order functions.
+
+ <!-- <h3>Summing with higher-order functions</h3> -->
