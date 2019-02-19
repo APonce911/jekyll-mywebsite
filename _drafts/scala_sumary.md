@@ -292,3 +292,22 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
  <h3>Summing with higher-order functions</h3>
+  the functions above can be summarized passing the respective function (id/cube/factorial) as a parameter to a higher order function (sum).
+
+  <pre>
+   <code>
+    def sum(f: Int => Int, a: Int, b: Int): Int =
+      if (a > b) 0
+      else f(a) + sum(f, a + 1, b)
+   </code>
+  </pre>
+
+  <pre>
+   <code>
+    def id(x: Int): Int = x
+    def sumInts(a: Int, b: Int) = sum(id, a, b)
+    def sumCubes(a: Int, b: Int) = sum(cube, a, b)
+    def sumFactorials(a: Int, b: Int) = sum(factorial, a, b)
+   </code>
+  </pre>
+
