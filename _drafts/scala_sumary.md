@@ -205,8 +205,8 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   <pre>
    <code>
     sealed trait Symbol
-    case class Alive(...) extends Symbol
-    case class Dead(...) extends Symbol
+    case class Note(...) extends Symbol
+    case class Rest(...) extends Symbol
    </code>
   </pre>
  <h3>Pattern Matching</h3>
@@ -215,15 +215,15 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   Used to to distinguish between the different cases of symbols.
   <pre>
    <code>
-    def SymbolAnimal(symbol: Symbol): String =
+    def symbolDuration(symbol: Symbol): String =
       symbol match {
-        case Alive(name, type, age) => name
-        case Dead(name) => name
+        case Note(name, duration, octave) => duration
+        case Rest(duration) => duration
       }
    </code>
   </pre>
 
-  Here, Alive(...) and Dead(...) are constructor patterns and name is called variable pattern.
+  Here, Note(...) and Rest(...) are constructor patterns and duration is called variable pattern.
  <h3>Exhaustivity</h3>
   when not all cases of a Symbol are handled, the compiler informs us.
  <h3>Equals</h3>
@@ -234,11 +234,19 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
   <pre>
    <code>
-    sealed trait AnimalType
-    case object Pig extends AnimalType
-    case object Cat extends AnimalType
-    case object Dog extends AnimalType
+    sealed trait NoteName
+    case object A extends NoteName
+    case object B extends NoteName
+    case object C extends NoteName
     …
-    case object Bird extends AnimalType
+    case object G extends NoteName
    </code>
   </pre>
+<!--  <h3>Algebraic Data Types</h3>
+  if a part of a program can be formulated in terms of an <strong>is</strong> relationship, you will express it as a sealed trait:
+  “A symbol is either a note or a rest.”
+
+  if it can be formulated in terms of an  <strong>has</strong> relationship,you will express it as a case class:
+
+  “A note has a name, a duration and an octave number.”
+ -->
