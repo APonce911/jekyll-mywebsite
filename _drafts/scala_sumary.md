@@ -201,7 +201,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
   and we can access any property by using the dot notation, just like Ruby or Javascript.
  <h3>Defining Alternatives with Sealed Traits</h3>
-  Symbols is something that can only be embodied by a fixed set of alternatives.We can express it using the sealed trait definition.For example, an animal can be dead or alive:
+  a type(here, Symbol) is something that can only be embodied by a fixed set of alternatives.We can express it using the sealed trait definition.For example, a musical symbol can be a note or a rest:
 
   <pre>
    <code>
@@ -251,4 +251,10 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   if it can be formulated in terms of an  <strong>has</strong> relationship,you will express it as a case class:
 
   “A note has a name, a duration and an octave number.”
+
+ <h3>Observations</h3>
+ case class != case object
+
+ case class is used to define a class(name, properties and parent(extends ...))
+ case object is used to restrict the values of a property
 
