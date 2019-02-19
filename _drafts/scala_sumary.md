@@ -341,3 +341,21 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     def sumCubes(a: Int, b: Int) = sum(x => x * x * x, a, b)
    </code>
   </pre>
+
+<h2>Standard Library</h2>
+ <h3>List</h3>
+  They seems like an array, but they are not.
+  they cannot be changes(immutable)
+  they are recursive
+  they are homogeneous; All elements have the same type
+
+  Ex:
+
+  <pre>
+   <code>
+    val fruit: List[String] = List("apples", "oranges", "pears")
+    val nums: List[Int] = List(1, 2, 3, 4)
+    val diag3: List[List[Int]] = List(List(1, 0, 0), List(0, 1, 0), List(0, 0, 1))
+    val empty: List[Nothing] = List()
+   </code>
+  </pre>
