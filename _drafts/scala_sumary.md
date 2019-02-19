@@ -359,3 +359,20 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     val empty: List[Nothing] = List()
    </code>
   </pre>
+ <h3>Constructors of Lists</h3>
+  All lists are construted from:
+  -the empty list nil
+  -the construction operator(cons) ::
+  x::xs gives a list with the first element x followed by the elements of xs, which is a list itself
+
+ <pre>
+  <code>
+   val nums = 1 :: 2 :: 3 :: 4 :: Nil
+  </code>
+ </pre>
+
+ <pre>
+  <code>
+   val nums = Nil.::(4).::(3).::(2).::(1)
+  </code>
+ </pre>
