@@ -199,5 +199,32 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   val c3 = Note("C", "Quarter", 3)
 
   and we can access any property by using the dot notation, just like Ruby or Javascript.
- <!-- <h3>Defining Alternatives with Sealed Traits</h3> -->
+ <h3>Defining Alternatives with Sealed Traits</h3>
+  Symbols is something that can only be embodied by a fixed set of alternatives.We can express it using the sealed trait definition.For example, an animal can be dead or alive:
+
+  <pre>
+   <code>
+    sealed trait Symbol
+    case class Alive(...) extends Symbol
+    case class Dead(...) extends Symbol
+   </code>
+  </pre>
+ <h3>Pattern Matching</h3>
+  Works like a case function. If the object matches a pattern(LHS) it execute an expression(RHS). The arrow symbol(=>) separates the parernt from the expressions.
+
+  Used to to distinguish between the different cases of symbols.
+  <pre>
+   <code>
+    def symbolNamesymbol: Symbol): String =
+      symbol match {
+        case Alive(name, birth, age) => name
+        case Dead(name) => name
+      }
+   </code>
+  </pre>
+
+  Here, Alive(...) and Dead(...) are constructor patterns and name is called variable pattern.
+
+ <!-- <h3>Exhaustivity</h3> -->
+
 
