@@ -180,6 +180,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
+
 <h2>Structuring Information</h2>
  <h3>Aggregating Information with Case Classes</h3>
   Case class has a syntax close to a JS object
@@ -194,7 +195,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
 
-  we can create values(like objects) of this type calling its constructor(Note(...))
+  we can create values(like objects or instances) of this type calling its constructor(Note(...))
 
   val c3 = Note("C", "Quarter", 3)
 
@@ -225,6 +226,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
   Here, Note(...) and Rest(...) are constructor patterns and duration is called variable pattern.
  <h3>Exhaustivity</h3>
+
   when not all cases of a Symbol are handled, the compiler informs us.
  <h3>Equals</h3>
   Comparing instances of case classes you compare their values.
