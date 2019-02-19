@@ -343,7 +343,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
 <h2>Standard Library</h2>
- <h3>List</h3>
+ <h3>Lists</h3>
   They seems like an array, but they are not.
   they cannot be changes(immutable)
   they are recursive
@@ -365,14 +365,53 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   -the construction operator(cons) ::
   x::xs gives a list with the first element x followed by the elements of xs, which is a list itself
 
- <pre>
-  <code>
-   val nums = 1 :: 2 :: 3 :: 4 :: Nil
-  </code>
- </pre>
+  <pre>
+   <code>
+    val nums = 1 :: 2 :: 3 :: 4 :: Nil
+   </code>
+  </pre>
 
- <pre>
-  <code>
-   val nums = Nil.::(4).::(3).::(2).::(1)
-  </code>
- </pre>
+  <pre>
+   <code>
+    val nums = Nil.::(4).::(3).::(2).::(1)
+   </code>
+  </pre>
+ <h3>Manipulating Lists</h3>
+  It's possible to decompose lists with pattern matching:
+  <pre>
+   <code>
+    nums match {
+      // Lists of `Int` that starts with `1` and then `2`
+      case 1 :: 2 :: xs => …
+      // Lists of length 1
+      case x :: Nil => …
+      // Same as `x :: Nil`
+      case List(x) => …
+      // The empty list, same as `Nil`
+      case List() =>
+      // A list that contains as only element another list that starts with `2`
+      case List(2 :: xs) => …
+    }
+   </code>
+  </pre>
+
+  Insertion sort method:
+
+  <pre>
+   <code>
+    val cond: (Int, Int) => Boolean = (x:Int,y:Int)=>x<y
+    def insert(x: Int, xs: List[Int]): List[Int] =
+      xs match {
+        case List() => x :: Nil
+        case y :: ys =>
+          if (cond(x, y)) x :: y :: ys
+          else y :: insert(x, ys)
+      }
+
+    insert(2, 1 :: 3 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
+    insert(1, 2 :: 3 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
+    insert(3, 1 :: 2 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
+   </code>
+  </pre>
+
+  This method is interesting because the condition (cond boolean) to place a element is an anomymous function, and its body is another anonymous function (boolean). So we have to define its parameters x,y and integers and also its body as x<y. The (Int,Int) part do not define it, its only the cond type.
