@@ -157,7 +157,6 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
   MCD oscillates and Factorial extends the number of elements on its expression.
-
  <h3>Tail Recursion</h3>
 
   Is when the last action of a method is to call itself. In case of the factorial method, its not tail recursive because after calling itself with factorial(n-1) it has to multiply to n.
@@ -181,3 +180,24 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
+<h2>Structuring Information</h2>
+ <h3>Aggregating Information with Case Classes</h3>
+  Case class has a syntax close to a JS object
+
+  <pre>
+   <code>
+    case class Note(
+      name: String,
+      duration: String,
+      octave: Int
+    )
+   </code>
+  </pre>
+
+  we can create values(like objects) of this type calling its constructor(Note(...))
+
+  val c3 = Note("C", "Quarter", 3)
+
+  and we can access any property by using the dot notation, just like Ruby or Javascript.
+ <!-- <h3>Defining Alternatives with Sealed Traits</h3> -->
+
