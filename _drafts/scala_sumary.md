@@ -416,7 +416,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
   This method is interesting because the condition (cond boolean) to place a element is an anomymous function, and its body is another anonymous function (boolean). So we have to define its parameters x,y and integers and also its body as x<y. The (Int,Int) part do not define it, its only the cond type.
- <!-- <h3>Common Operations on Lists</h3>
- .map(anonymous func)
- .map(anonymous func)
- -->
+ <h3>Common Operations on Lists</h3>
+  .map(anonymous func)
+  .filter(anonymous func)
+  .flatMap{anonymous func}
