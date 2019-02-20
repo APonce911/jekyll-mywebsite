@@ -420,3 +420,28 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   .map(anonymous func)
   .filter(anonymous func)
   .flatMap{anonymous func}
+ <h3>Optional Values</h3>
+  Use options when you dont have a defined return type.
+  Partially defined functions:
+
+  <pre>
+   <code>
+    def sqrt(x: Double): Option[Double] =
+      if (x < 0) None else Some(…)
+   </code>
+  </pre>
+ <h3>Manipulating Options</h3>
+
+  Use pattern matching to decompose options
+
+  <pre>
+   <code>
+    def foo(x: Double): String =
+      sqrt(x) match {
+        case None => "no result"
+        case Some(y) => y.toString
+      }
+   </code>
+  </pre>
+ <!-- <h3>Common Operations on Options</h3> -->
+
