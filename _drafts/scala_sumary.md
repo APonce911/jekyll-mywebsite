@@ -1,10 +1,68 @@
 This is my small scala sumary. Syntax comparisons will be made mainly against ruby and javascript.
 Used the content of the following page https://www.scala-exercises.org/scala_tutorial
 <h2>Terms & types</h2>
- <h3></h3>Primitives
+ <h3>Primitives</h3>
+  they represent the simplest elements
+
+  The integer 1
+  <pre>
+   <code>
+    1
+   </code>
+  </pre>
+  The double 1.572
+  <pre>
+   <code>
+    1.572
+   </code>
+  </pre>
+  The boolean value "true"
+  <pre>
+   <code>
+    true
+   </code>
+  </pre>
+  The text(String) "Hello"
+  <pre>
+   <code>
+    "Hello"
+   </code>
+  </pre>
+  IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
  <h3></h3>Operators
+  1 + 2 = 3
+
+  1 and 2 are operands
+  + is the operator
+
+  "Hello, " ++ "Scala"
+
+  "Hello, " and "Scala" are operands
+  ++ is the operator
+
  <h3></h3>Method Calls
- <h3></h3>Operators are methods
+  <pre>
+   <code>
+    "hello".size
+   </code>
+  </pre>
+
+  "hello" is the target object
+  size is the method
+
+  Methods are applied on expressions using the dot notation.
+  Method parameters are passed inside ().
+ <h3>Operators are methods</h3>
+ In fact, operators are methods with symbolic values.
+
+ <pre>
+  <code>
+   3 + 2 == 3.+(2)
+   1.to(10) == 1 to 10
+  </code>
+ </pre>
+
+ Each expression (or object) has a value and a type.
 
 <h2>Definitions & Evaluations</h2>
  <h3></h3>Val(Constants) & Def(Variables)
@@ -511,3 +569,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     is._2 shouldBe "foo"
    </code>
   </pre>
+<!--  <h3>Functions as Objects</h3>
+  Functions are objects with apply methods. -->
+
+
