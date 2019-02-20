@@ -703,6 +703,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
 <h2>Object Oriented Programming</h2>
  <h3>Classes</h3>
+
   a class define a new constructor, and a new type.
  <h3>Objects</h3>
   Objects are the elements of a class type.
@@ -715,6 +716,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    i.e. defined inside the class definition.
  <h3>Data Abstraction</h3>
  <h3>Self Reference</h3>
+
   'this' represents the object on which the current method is executed.
  <h3>Preconditions</h3>
   require is used to enforce a precondition on the caller of a function.
@@ -758,7 +760,6 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
-
  <h3>Precedence Rules</h3>
   Increasing priority
 
@@ -777,6 +778,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
  <h3>Abstract Classes</h3>
+
   No instances of an abstract class can be created with the operator new.
  <h3>Class Extensions</h3>
   subclasses extends superclass:
@@ -832,3 +834,5 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     class Square extends Shape with Planar with Movable …
    </code>
   </pre>
+
+<!-- <h2>Imperative Programming</h2> -->
