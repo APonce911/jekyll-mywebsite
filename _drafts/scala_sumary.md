@@ -710,4 +710,32 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
  <h3>Members of an Object</h3>
   Just like a property of a Ruby object, you can get the member of an object
   with the infix operator '.'
+ <h3>Methods</h3>
+   A package of functions operating on a data abstraction in the data abstraction itself.
+   i.e. defined inside the class definition.
+ <h3>Data Abstraction</h3>
+ <h3>Self Reference</h3>
+  'this' represents the object on which the current method is executed.
+ <h3>Preconditions</h3>
+  require is used to enforce a precondition on the caller of a function.
+
+  require function
+  <pre>
+   <code>
+    class Rational(x: Int, y: Int) {
+      require(y > 0, "denominator must be positive")
+      ...
+    }
+   </code>
+  </pre>
+ <h3>Assertions</h3>
+  assert is used as to check the code of the function itself.
+  <pre>
+   <code>
+    val x = sqrt(y)
+    assert(x >= 0)
+   </code>
+  </pre>
+ <h3>Constructors</h3>
+ <h3>Operators</h3>
 
