@@ -738,7 +738,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
  <h3>Constructors</h3>
  <h3>Operators</h3>
-  as said before, operators are methods with symbolic identifiers. So you can overwrite the operators for some types:
+  as said before, operators are methods with symbolic identifiers. So you can override the operators for some types:
 
   <pre>
    <code>
@@ -755,6 +755,50 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
       def - (r: Rational) = ...
       def * (r: Rational) = ...
       ...
+    }
+   </code>
+  </pre>
+
+ <h3>Precedence Rules</h3>
+  Increasing priority
+
+  <pre>
+   <code>
+    (all letters)
+    |
+    ^
+    &
+    < >
+    = !
+    :
+    + -
+    * / %
+    (all other special characters)
+   </code>
+  </pre>
+ <h3>Abstract Classes</h3>
+  No instances of an abstract class can be created with the operator new.
+ <h3>Class Extensions</h3>
+  subclasses extends superclass:
+
+  <pre>
+   <code>
+    class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet {
+   </code>
+  </pre>
+  NonEmpty is a subclass and IntSet is its superclass.
+  IntSet is a subclass of Object.
+ <h3>Implementation and Overriding</h3>
+  <pre>
+   <code>
+    abstract class Base {
+      def foo = 1
+      def bar: Int
+    }
+
+    class Sub extends Base {
+      override def foo = 2
+      def bar = 3
     }
    </code>
   </pre>
