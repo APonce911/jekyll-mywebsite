@@ -813,3 +813,22 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
+ <h3>Traits</h3>
+  use when you want to inherit code from more than one superclass.
+  Defined just like an abstract class.
+  OBS
+  <pre>
+   <code>
+    trait Planar {
+      def height: Int
+      def width: Int
+      def surface = height * width
+    }
+   </code>
+  </pre>
+  classes,objects and traits can inherit from one class,but from many traits:
+  <pre>
+   <code>
+    class Square extends Shape with Planar with Movable …
+   </code>
+  </pre>
