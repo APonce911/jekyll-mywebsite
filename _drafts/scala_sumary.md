@@ -497,5 +497,5 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
 
-  IMPORTANT! Always use "" on strings.
+  IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
 
