@@ -82,7 +82,16 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
 
- <h3></h3>Evaluation
+  If a method is recursive, i.e. call for itself, you need to specify its return type
+
+  <pre>
+   <code>
+    def factorial(n: Int): Int =
+      if (n ==1) 0
+      else factorial(n - 1) * n
+   </code>
+  </pre>
+ <h3>Evaluation</h3>
   The substitution model is a expression evaluation scheme.Used when the expression can be reduced to a value(not a loop).
   Call-by-Value
   1- Reduces arguments first
@@ -93,8 +102,24 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   2-Reduce arguments when necessary. Can let an argument unreduced if it's not used on function body.
 
 <h2>Functional Loops</h2>
- <h3></h3>Conditional
- <h3></h3>Boolean expressions
+ <h3>Conditional</h3>
+
+  <pre>
+   <code>
+    def abs(x: Double) = if (x >= 0) x else -x
+   </code>
+  </pre>
+ <h3>Boolean Expressions</h3>
+ <pre>
+  <code>
+   true  false      // Constants
+   !b               // Negation
+   b && b           // Conjunction
+   b || b           // Disjunction
+
+   e <= e, e >= e, e < e, e > e, e == e, e != e
+  </code>
+ </pre>
 
 <h2>Lexical Scopes</h2>
  <h3>Nested Functions</h3>
