@@ -70,7 +70,6 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   Use Val to define constants and Def to define methods.
   val = value
   def = definition
-
  <h3>Methods</h3>
   Can have one or more parameters, separated with ',', and with its respective types defined after a ':'.
   ex:
@@ -110,16 +109,16 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
  <h3>Boolean Expressions</h3>
- <pre>
-  <code>
-   true  false      // Constants
-   !b               // Negation
-   b && b           // Conjunction
-   b || b           // Disjunction
+  <pre>
+   <code>
+    true  false      // Constants
+    !b               // Negation
+    b && b           // Conjunction
+    b || b           // Disjunction
 
-   e <= e, e >= e, e < e, e > e, e == e, e != e
-  </code>
- </pre>
+    e <= e, e >= e, e < e, e > e, e == e, e != e
+   </code>
+  </pre>
 
 <h2>Lexical Scopes</h2>
  <h3>Nested Functions</h3>
@@ -618,6 +617,6 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
 <!--  <h3>Functions as Objects</h3>
-  Functions are objects with apply methods. -->
-
+  Functions are objects with apply methods.
+ -->
 
