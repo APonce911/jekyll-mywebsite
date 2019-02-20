@@ -918,4 +918,38 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   on Stream cons the second parameter(tl) is evaluated by call-by-name rules(=>)
 
   The other methods are same as List (filter,map,flatMap)
+ <h3>Lazy Evaluation</h3>
+  if tail is called many times, it will be recomputed each time. To avoid this we must store the result of the first evaluation of tail.
+
+  <pre>
+   <code>
+    lazy val x = expr
+   </code>
+  </pre>
+ <h3>Lazy vals and streams</h3>
+  Using a lazy value for tail, Stream.cons can be implemented more efficiently:
+  <pre>
+   <code>
+    def cons[T](hd: T, tl: => Stream[T]) = new Stream[T] {
+      def head = hd
+      lazy val tail = tl
+      …
+    }
+   </code>
+  </pre>
+
+ <h3>Nice exercice</h3>
+  <pre>
+   <code>
+    val builder = new StringBuilder
+    val x = { builder += 'x'; 1 }
+    lazy val y = { builder += 'y'; 2 }
+    def z = { builder += 'z'; 3 }
+
+    z + y + x + z + y + x
+
+    builder.result() shouldBe "xzyz"
+   </code>
+  </pre>
+
 <h2>Type Classes</h2>
