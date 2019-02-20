@@ -443,5 +443,8 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
       }
    </code>
   </pre>
- <!-- <h3>Common Operations on Options</h3> -->
+ <h3>Common Operations on Options</h3>
+  .map(=>)
+  .filter(=>)
+  .flatMap(=>)
 
