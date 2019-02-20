@@ -1,5 +1,6 @@
 This is my small scala sumary. Syntax comparisons will be made mainly against ruby and javascript.
 Used the content of the following page https://www.scala-exercises.org/scala_tutorial
+
 <h2>Terms & types</h2>
  <h3>Primitives</h3>
   they represent the simplest elements
@@ -699,4 +700,14 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     divide(2, 0) shouldBe Left("Division by zero")
    </code>
   </pre>
+
+<h2>Object Oriented Programming</h2>
+ <h3>Classes</h3>
+  a class define a new constructor, and a new type.
+ <h3>Objects</h3>
+  Objects are the elements of a class type.
+  Use the operator 'new' to create an object.
+ <h3>Members of an Object</h3>
+  Just like a property of a Ruby object, you can get the member of an object
+  with the infix operator '.'
 
