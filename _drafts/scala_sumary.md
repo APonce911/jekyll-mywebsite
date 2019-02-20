@@ -835,4 +835,54 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    </code>
   </pre>
 
-<!-- <h2>Imperative Programming</h2> -->
+<h2>Imperative Programming</h2>
+ The substitution model of computation cannot be used.
+ The state of an object depend on its history.
+ use 'var' to create a variable definition .
+ use '=' to assign a new value to a variable.
+ <h3>State in Objects</h3>
+  Stateful objects
+  Objects with state have some variable members. Ex: a Bank Account
+ <h3>Operational Equivalence</h3>
+
+  After a sequence of testing, and the results are same, there is operational equivalence.
+ <h3>Imperative Loops</h3>
+  while loops
+  <pre>
+   <code>
+    def power(x: Double, exp: Int): Double = {
+      var r = 1.0
+      var i = exp
+      while (i > 0) { r = r * x; i = i - 1 }
+      r
+    }
+   </code>
+  </pre>
+  for-loops
+   <pre>
+    <code>
+     for (i <- 1 until 3) { System.out.print(i + " ") }
+    </code>
+   </pre>
+
+<h2>Classes vs Case Classes</h2>
+ creating instances
+ class: require the keyword new
+ case class: constructor parameters are promoted to members
+
+ <pre>
+  <code>
+   val aliceAccount = new BankAccount
+   val c3 = Note("C", "Quarter", 3)
+  </code>
+ </pre>
+
+ The same definition of BankAccount(class) create different objects (notion of identity), and the same definition of Note(case class) lead to equal values
+
+ pattern matching does not work on regular classes.
+
+ A case class cannot extend another case class.
+
+ A case class is a special case of a class, with predifined overriting on some properties(parameters are promoted to members;Equality redefinition;Java hashCode redefinition;toString redefinition;Create a copy of a case class;Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
+
+<h2>Polymorphic Types</h2>
