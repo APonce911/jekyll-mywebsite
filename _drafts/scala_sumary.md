@@ -616,7 +616,87 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     is._2 shouldBe "foo"
    </code>
   </pre>
-<!--  <h3>Functions as Objects</h3>
+ <h3>Functions as Objects</h3>
   Functions are objects with apply methods.
- -->
+  <pre>
+   <code>
+    package scala
+    trait Function1[A, B] {
+      def apply(x: A): B
+    }
+   </code>
+  </pre>
+ <h3>Expansion of Function Values</h3>
+  <pre>
+   <code>
+    {
+      class AnonFun extends Function1[Int, Int] {
+        def apply(x: Int) = x * x
+      }
+      new AnonFun
+    }
+   </code>
+  </pre>
+ <h3>Expansion of Function Calls</h3>
+  f(a,b) = f.apply(a, b)
+ <h3>For Expressions</h3>
+  Map
+  <pre>
+   <code>
+    /* xs.map(x => x + 1) */
+    for (x <- xs) yield x + 1
+   </code>
+  </pre>
+  Filter
+  <pre>
+   <code>
+    /* xs.filter(x => x % 2 == 0) */
+    for (x <- xs if x % 2 == 0) yield x
+   </code>
+  </pre>
+  flatMap
+  <pre>
+   <code>
+    /* xs.flatMap(x => ys.map(y => (x, y))) */
+    for (x <- xs; y <- ys) yield (x, y)
+   </code>
+  </pre>
+ <h3>Method's Parameters</h3>
+  <pre>
+   <code>
+    Range(1, 10, 2)
+   </code>
+  </pre>
+  Can be rewritten
+  <pre>
+   <code>
+    case class Range(start: Int, end: Int, step: Int)
+    Range(start = 1, end = 10, step = 2)
+   </code>
+  </pre>
+  It's to set default values when defining the contructor, so the parameter can be omitted
+   <pre>
+    <code>
+     case class Range(start: Int, end: Int, step: Int = 1)
+    </code>
+   </pre>
+
+   Undefined number of parameters.
+   <pre>
+    <code>
+     def average(x: Int, xs: Int*): Double =
+      (x :: xs.to[List]).sum.toDouble / (xs.size + 1)
+    </code>
+   </pre>
+ <h3>Type Aliases</h3>
+  <pre>
+   <code>
+    type Result = Either[String, (Int, Int)]
+    def divide(dividend: Int, divisor: Int): Result =
+      if (divisor == 0) Left("Division by zero")
+      else Right((dividend / divisor, dividend % divisor))
+    divide(6, 4) shouldBe Right((1, 2))
+    divide(2, 0) shouldBe Left("Division by zero")
+   </code>
+  </pre>
 
