@@ -953,3 +953,26 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
 <h2>Type Classes</h2>
+ How to use insertionSort for element types other than Int?
+ '<' operator not defined for arbitrary types...
+ Parametrize lessThan function (comparison operation)
+
+ But there is a class in standard library that represents orderings:
+ scala.math.Ordering
+
+ We can define insertionSort with ordering, but it is too repetitive.
+
+ Use Implicit Parameters
+
+ <pre>
+  <code>
+   def insertionSort[T](xs: List[T])(implicit ord: Ordering[T]): List[T] = {
+     def insert(y: T, ys: List[T]): List[T] =
+       … if (ord.lt(y, z)) …
+
+     … insert(y, insertionSort(ys)) …
+   }
+  </code>
+ </pre>
+
+
