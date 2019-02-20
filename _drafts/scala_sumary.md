@@ -498,4 +498,16 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
 
   IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
+ <h3>Tuples</h3>
+  work as a conjuntion of elements, and they can have different types.
+  More generally, a type (T1, …, Tn) is a tuple type of n elements whose ith element has type Ti.
 
+  You can retrieve the elements of a tuple using tuple pattern, or you can identify the member by its position (_i)
+
+  <pre>
+   <code>
+    val is: (Int, String) = (42, "foo")
+    is._1 shouldBe 42
+    is._2 shouldBe "foo"
+   </code>
+  </pre>
