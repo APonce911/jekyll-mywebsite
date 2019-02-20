@@ -458,19 +458,44 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
   Either[A,B], represents a value that can either be type A or type B, and can be decomposed in two cases: Left and Right.
 
- <pre>
-  <code>
-   def sqrt(x: Double): Either[String, Double] =
-     if (x < 0) Left("x must be positive")
-     else Right(…)
-  </code>
- </pre>
+  <pre>
+   <code>
+    def sqrt(x: Double): Either[String, Double] =
+      if (x < 0) Left("x must be positive")
+      else Right(…)
+   </code>
+  </pre>
 
- Either[A,B] have map and flatMap, but it transform the Right case only. "right biased".
+  Either[A,B] have map and flatMap, but it transform the Right case only. "right biased".
 
- Either[A,B] has a filterOrElse method, it transforms a Right value into Left value if it does not satisfy a given predicate.
+  Either[A,B] has a filterOrElse method, it transforms a Right value into Left value if it does not satisfy a given predicate.
 
- Prior to Scala 2.12, Either was unbiased, so you had to specity the side you wanted to transform.
+  Prior to Scala 2.12, Either was unbiased, so you had to specity the side you wanted to transform.
 
+<h2>Syntatic Conveniences</h2>
+ <h3>String Interpolation</h3>
 
+  <pre>
+   <code>
+    def greet(name: String): String =
+      s"Hello, $name!"
+
+    greet("Scala") shouldBe "Hello, Scala!"
+   </code>
+  </pre>
+
+  do not forget to prefix the string literal with "s"!!!
+
+  If you want to splice a complex expression:
+
+  <pre>
+   <code>
+    def greet(name: String): String =
+      s"Hello, ${name.toUpperCase}!"
+
+    greet("Scala") shouldBe "Hello, SCALA!"
+   </code>
+  </pre>
+
+  IMPORTANT! Always use "" on strings.
 
