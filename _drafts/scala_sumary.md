@@ -894,4 +894,28 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
  Lower Bounds
  A >: Reptile
 <h2>Lazy Evaluation</h2>
+ <h3>Delayed Evaluation</h3>
+  Streams are similar to lists, but their tail is evaluated only in demand.
+ <h3>Defining Streams</h3>
+  <pre>
+   <code>
+    val xs = Stream.cons(1, Stream.cons(2, Stream.empty))
+   </code>
+  </pre>
+ <h3>Stream Ranges</h3>
+  <pre>
+   <code>
+    def streamRange(lo: Int, hi: Int): Stream[Int] =
+      if (lo >= hi) Stream.empty
+      else Stream.cons(lo, streamRange(lo + 1, hi))
+   </code>
+  </pre>
+  It returns a single Stream type object with start as a head element. The others are only computed when needed.(tail called on stream)
+
+  :: for lists
+  ::# for streams
+
+  on Stream cons the second parameter(tl) is evaluated by call-by-name rules(=>)
+
+  The other methods are same as List (filter,map,flatMap)
 <h2>Type Classes</h2>
