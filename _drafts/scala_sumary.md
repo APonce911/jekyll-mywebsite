@@ -447,4 +447,30 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   .map(=>)
   .filter(=>)
   .flatMap(=>)
+ <h3>Error Handling</h3>
+  Try[A], represents a computation that attempted to return an A.
+  Can be Success[A] or Failure;
+
+  None x Failure
+  Failure provide a reason of the failure
+
+  Try[A] also have map, filter and flatMap
+
+  Either[A,B], represents a value that can either be type A or type B, and can be decomposed in two cases: Left and Right.
+
+ <pre>
+  <code>
+   def sqrt(x: Double): Either[String, Double] =
+     if (x < 0) Left("x must be positive")
+     else Right(…)
+  </code>
+ </pre>
+
+ Either[A,B] have map and flatMap, but it transform the Right case only. "right biased".
+
+ Either[A,B] has a filterOrElse method, it transforms a Right value into Left value if it does not satisfy a given predicate.
+
+ Prior to Scala 2.12, Either was unbiased, so you had to specity the side you wanted to transform.
+
+
 
