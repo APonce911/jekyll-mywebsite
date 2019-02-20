@@ -802,3 +802,14 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
     }
    </code>
   </pre>
+ <h3>Object Definitions</h3>
+  When you need a single instance of a class (Empty for IntSet), you can create a singleton object named Empty. No other instances of it can be created. This type of object are values.
+
+  <pre>
+   <code>
+    object Empty extends IntSet {
+      def contains(x: Int): Boolean = false
+      def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
+    }
+   </code>
+  </pre>
