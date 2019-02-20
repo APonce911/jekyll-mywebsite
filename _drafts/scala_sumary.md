@@ -54,7 +54,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   Methods are applied on expressions using the dot notation.
   Method parameters are passed inside ().
  <h3>Operators are methods</h3>
- In fact, operators are methods with symbolic values.
+ In fact, operators are methods with symbolic values, or symbolic identifier.
 
  <pre>
   <code>
@@ -738,4 +738,23 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   </pre>
  <h3>Constructors</h3>
  <h3>Operators</h3>
+  as said before, operators are methods with symbolic identifiers. So you can overwrite the operators for some types:
 
+  <pre>
+   <code>
+    class Rational(x: Int, y: Int) {
+      private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
+      private val g = gcd(x, y)
+      def numer = x / g
+      def denom = y / g
+      def + (r: Rational) =
+        new Rational(
+          numer * r.denom + r.numer * denom,
+          denom * r.denom
+        )
+      def - (r: Rational) = ...
+      def * (r: Rational) = ...
+      ...
+    }
+   </code>
+  </pre>
