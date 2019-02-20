@@ -65,9 +65,32 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
  Each expression (or object) has a value and a type.
 
 <h2>Definitions & Evaluations</h2>
- <h3></h3>Val(Constants) & Def(Variables)
+ <h3>Naming</h3>
+  Naming things gives more readability to your program
+  Use Val to define constants and Def to define methods.
+  val = value
+  def = definition
+
  <h3></h3>Methods
+  Can have one or more parameters, separated with ',', and with its respective types defined after a ':'.
+  ex:
+
+  <pre>
+   <code>
+    def square(x: Double) = x * x
+    def sumOfSquares(x: Double, y: Double) = square(x) + square(y)
+   </code>
+  </pre>
+
  <h3></h3>Evaluation
+ The substitution model is a expression evaluation scheme.Used when the expression can be reduced to a value(not a loop).
+ Call-by-Value
+ 1- Reduces arguments first
+ 2- Compute the function values,from left to right
+
+ Call-by-Name
+ 1-Start computing the function values,from left to right
+ 2-Reduce arguments when necessary. Can let an argument unreduced if it's not used on function body.
 
 <h2>Functional Loops</h2>
  <h3></h3>Conditional
