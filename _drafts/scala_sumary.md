@@ -886,6 +886,8 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
  A case class is a special case of a class, with predifined overriting on some properties(parameters are promoted to members;Equality redefinition;Java hashCode redefinition;toString redefinition;Create a copy of a case class;Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
 
 <h2>Polymorphic Types</h2>
+Used in order to write generic code (for values of different types) without compromising static typing richness.
+
 
  Upper Bounds
  A <: B means: A is a subtype of B, and
