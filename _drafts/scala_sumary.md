@@ -2,15 +2,14 @@ This is my small scala sumary. Syntax comparisons will be made mainly against ru
 Used the content of the following page https://www.scala-exercises.org/scala_tutorial
 
 <h2>Terms & types</h2>
- <h3>Primitives</h3>
+ <h3>Primitive Expressions</h3>
   they represent the simplest elements
 
   The integer 1
   <pre>
    <code>
     1
-   </code>
-  </pre>
+   </code></pre>
   The double 1.572
   <pre>
    <code>
@@ -53,6 +52,15 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
 
   Methods are applied on expressions using the dot notation.
   Method parameters are passed inside ().
+
+  <h3>Expressions vs Statements</h3>
+  Expressions: What code is (value)
+  Statements: What code does (represent an action or command)
+
+  <h3>Method vs Functions</h3>
+  Methods: operate inside an object
+  Function: The rest
+
  <h3>Operators are methods</h3>
  In fact, operators are methods with symbolic values, or symbolic identifier.
 
