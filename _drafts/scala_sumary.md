@@ -132,7 +132,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
 <h2>Lexical Scopes</h2>
  <h3>Nested Functions</h3>
-  Are auxiliary functions defined inside the parent fucntion. Used to isolate a function from the user, just like private functions.
+  Are auxiliary functions defined inside the parent function. Used to isolate a function from the user, just like private functions.
   <pre>
    <code>
     def sqrt(x: Double) = {
@@ -150,15 +150,16 @@ Use the following pages to help you through your reading: <a href="https://www.s
     }
    </code></pre>
  <h3>Blocks</h3>
-  -It contains a sequence of definitions or expressions.
-  -The last element of a block is an expression that defines its value.
-  -This return expression can be preceded by auxiliary definitions.
-  -Blocks are themselves expressions; a block may appear everywhere an -expression can.
-  -The definitions inside a block are only visible from within the block.
-  -The definitions inside a block shadow definitions of the same names outside the block.
+  - It contains a sequence of definitions or expressions.
+  - The last element of a block is an expression that defines its value.
+  - This return expression can be preceded by auxiliary definitions.
+  - Blocks are themselves expressions; a block may appear everywhere an expression can.
+  - The definitions inside a block are only visible from within the block.
+  - The definitions inside a block shadow definitions of the same names outside the block.
  <h3>Lexical Scoping</h3>
   definitions outside blocks are visible inside unless they are shadowed.(Would it be shadowed when redefined, right?)
-  defactorinng sqrt method:
+
+  refactorinng sqrt method:
   <pre>
    <code>
     def sqrt(x: Double) = {
@@ -188,7 +189,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
  <h3>Packages and Imports</h3>
-  top level definitions can be organized an imported as packages
+  Top-level definitions can be organized an imported as packages
 
   <pre>
    <code>
@@ -213,7 +214,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   here foo is a package(class?), Bar is an object and someMethod is a method
 
-  you can also import and object to not repeat them:
+  you can also import an object to not repeat them:
 
   <pre>
    <code>
