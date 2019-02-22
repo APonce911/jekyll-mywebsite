@@ -102,14 +102,15 @@ Use the following pages to help you through your reading: <a href="https://www.s
       else factorial(n - 1) * n
    </code></pre>
  <h3>Evaluation</h3>
-  The substitution model is a expression evaluation scheme.Used when the expression can be reduced to a value(not a loop).
+  The substitution model is an expression evaluation scheme. Used when the expression can be reduced to a value(not a loop).
+
   Call-by-Value
-  1- Reduces arguments first
-  2- Compute the function values,from left to right
+  1. Reduces arguments first.
+  1. Compute the function values, from left to right.
 
   Call-by-Name
-  1-Start computing the function values,from left to right
-  2-Reduce arguments when necessary. Can let an argument unreduced if it's not used on function body.
+  1. Start computing the function values, from left to right.
+  1. Reduce arguments when necessary. Can let an argument unreduced if it's not used on function body.
 
 <h2>Functional Loops</h2>
  <h3>Conditional</h3>
@@ -358,7 +359,8 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
 <h2>Higher-Order Functions</h2>
 
-   On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
+ On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
+
  <h3>Motivation</h3>
   its possible to factor out various recursive higher-order functions.
   Examples:
@@ -839,7 +841,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
  A case class is a special case of a class, with predifined overriting on some properties(parameters are promoted to members;Equality redefinition;Java hashCode redefinition;toString redefinition;Create a copy of a case class;Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
 
 <h2>Polymorphic Types</h2>
-Used in order to write generic code (for values of different types) without compromising static typing richness.
+ Used in order to write generic code (for values of different types) without compromising static typing richness.
 
 
  Upper Bounds
@@ -848,6 +850,7 @@ Used in order to write generic code (for values of different types) without comp
 
  Lower Bounds
  A >: Reptile
+
 <h2>Lazy Evaluation</h2>
  <h3>Delayed Evaluation</h3>
   Streams are similar to lists, but their tail is evaluated only in demand.
