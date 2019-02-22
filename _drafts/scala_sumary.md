@@ -101,8 +101,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     def factorial(n: Int): Int =
       if (n ==1) 0
       else factorial(n - 1) * n
-   </code>
-  </pre>
+   </code></pre>
  <h3>Evaluation</h3>
   The substitution model is a expression evaluation scheme.Used when the expression can be reduced to a value(not a loop).
   Call-by-Value
@@ -119,8 +118,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <pre>
    <code>
     def abs(x: Double) = if (x >= 0) x else -x
-   </code>
-  </pre>
+   </code></pre>
  <h3>Boolean Expressions</h3>
   <pre>
    <code>
@@ -130,8 +128,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     b || b           // Disjunction
 
     e <= e, e >= e, e < e, e > e, e == e, e != e
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Lexical Scopes</h2>
  <h3>Nested Functions</h3>
@@ -151,8 +148,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
       sqrtIter(1.0, x)
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Blocks</h3>
   -It contains a sequence of definitions or expressions.
   -The last element of a block is an expression that defines its value.
@@ -178,8 +174,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
       sqrtIter(1.0)
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Semicolons</h3>
   In most cases semicolons are optional.
   Used when you have two statements in a single line
@@ -188,8 +183,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     someLongExpression +
       someOtherExpression
-   </code>
-  </pre>
+   </code></pre>
  <h3>Top-level Definitions</h3>
 
   the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
@@ -204,8 +198,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       Bar.someMethod
       // Bar is visible because it is in the `foo` package too
     }
-   </code>
-  </pre>
+   </code></pre>
 
   when some definitions are not visible, you must use fully qualified names to refer them:
 
@@ -216,8 +209,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     object Quux {
       foo.Bar.someMethod
     }
-   </code>
-  </pre>
+   </code></pre>
 
   here foo is a package(class?), Bar is an object and someMethod is a method
 
@@ -232,8 +224,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       // Bar refers to the imported `foo.Bar`
       Bar.someMethod
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Automatic Imports</h3>
 
   Any Scala application automatically imports the packages scala, java.lang and scala.Predef.
@@ -244,14 +235,12 @@ Use the following pages to help you through your reading: <a href="https://www.s
     object Hello {
       def main(args: Array[String]) = println("hello world!")
     }
-   </code>
-  </pre>
+   </code></pre>
   and can be executed with the following code:
   <pre>
    <code>
     $ scala Hello
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Tail Recursion</h2>
  <h3>Recursive Function Application</h3>
@@ -262,8 +251,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     def gcd(a: Int, b: Int): Int =
       if (b == 0) a else gcd(b, a % b)
-   </code>
-  </pre>
+   </code></pre>
 
   Factorial
 
@@ -271,8 +259,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     def factorial(n: Int): Int =
       if (n == 0) 1 else n * factorial(n - 1)
-   </code>
-  </pre>
+   </code></pre>
 
   MCD oscillates and Factorial extends the number of elements on its expression.
  <h3>Tail Recursion</h3>
@@ -296,8 +283,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
       iter(n,1)
     }
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Structuring Information</h2>
  <h3>Aggregating Information with Case Classes</h3>
@@ -310,8 +296,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       duration: String,
       octave: Int
     )
-   </code>
-  </pre>
+   </code></pre>
 
   we can create values(like objects or instances) of this type calling its constructor(Note(...))
 
@@ -326,8 +311,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     sealed trait Symbol
     case class Note(...) extends Symbol
     case class Rest(...) extends Symbol
-   </code>
-  </pre>
+   </code></pre>
  <h3>Pattern Matching</h3>
   Works like a case function. If the object matches a pattern(LHS) it execute an expression(RHS). The arrow symbol(=>) separates the parernt from the expressions.
 
@@ -339,8 +323,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
         case Note(name, duration, octave) => duration
         case Rest(duration) => duration
       }
-   </code>
-  </pre>
+   </code></pre>
 
   Here, Note(...) and Rest(...) are constructor patterns and duration is called variable pattern.
  <h3>Exhaustivity</h3>
@@ -360,8 +343,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     case object C extends NoteName
     …
     case object G extends NoteName
-   </code>
-  </pre>
+   </code></pre>
  <h3>Algebraic Data Types</h3>
   if a part of a program can be formulated in terms of an <strong>is</strong> relationship, you will express it as a sealed trait:
   “A symbol is either a note or a rest.”
@@ -376,7 +358,6 @@ Use the following pages to help you through your reading: <a href="https://www.s
   case object is used to restrict the values of a property
 
 <h2>Higher-Order Functions</h2>
- <h3>Higher-Order Functions</h3>
 
    On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
  <h3>Motivation</h3>
@@ -390,8 +371,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     def sumInts(a: Int, b: Int): Int =
       if (a > b) 0 else a + sumInts(a + 1, b)
-   </code>
-  </pre>
+   </code></pre>
   Sum the cubes of all the integers between a and b
   <pre>
    <code>
@@ -399,15 +379,13 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
     def sumCubes(a: Int, b: Int): Int =
       if (a > b) 0 else cube(a) + sumCubes(a + 1, b)
-   </code>
-  </pre>
+   </code></pre>
   Sum the factorials of all the integers between a and b
   <pre>
    <code>
     def sumFactorials(a: Int, b: Int): Int =
       if (a > b) 0 else factorial(a) + sumFactorials(a + 1, b)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Summing with higher-order functions</h3>
   the functions above can be summarized passing the respective function (id/cube/factorial) as a parameter to a higher order function (sum).
 
@@ -416,8 +394,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     def sum(f: Int => Int, a: Int, b: Int): Int =
       if (a > b) 0
       else f(a) + sum(f, a + 1, b)
-   </code>
-  </pre>
+   </code></pre>
 
   <pre>
    <code>
@@ -425,8 +402,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     def sumInts(a: Int, b: Int) = sum(id, a, b)
     def sumCubes(a: Int, b: Int) = sum(cube, a, b)
     def sumFactorials(a: Int, b: Int) = sum(factorial, a, b)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Functions Types</h3>
   A => B
   A argument
@@ -437,8 +413,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <pre>
    <code>
     (x: int) => x * x * x
-   </code>
-  </pre>
+   </code></pre>
 
   (...) is the parameter
    x * x * x is the body
@@ -449,16 +424,14 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <pre>
    <code>
     { def funcName(x1: T1, …, xn: Tn) = e ; funcName }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Summation with Anonymous Functions</h3>
   the respective functions(id/cube) are not defined and passed as parameters anymore. They are passed as literals on the higher order function (sum).
   <pre>
    <code>
     def sumInts(a: Int, b: Int) = sum(x => x, a, b)
     def sumCubes(a: Int, b: Int) = sum(x => x * x * x, a, b)
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Standard Library</h2>
  <h3>Lists</h3>
@@ -475,8 +448,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     val nums: List[Int] = List(1, 2, 3, 4)
     val diag3: List[List[Int]] = List(List(1, 0, 0), List(0, 1, 0), List(0, 0, 1))
     val empty: List[Nothing] = List()
-   </code>
-  </pre>
+   </code></pre>
  <h3>Constructors of Lists</h3>
   All lists are construted from:
   -the empty list nil
@@ -487,14 +459,12 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <pre>
    <code>
     val nums = 1 :: 2 :: 3 :: 4 :: Nil
-   </code>
-  </pre>
+   </code></pre>
 
   <pre>
    <code>
     val nums = Nil.::(4).::(3).::(2).::(1)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Manipulating Lists</h3>
   It's possible to decompose lists with pattern matching:
   <pre>
@@ -511,8 +481,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       // A list that contains as only element another list that starts with `2`
       case List(2 :: xs) => …
     }
-   </code>
-  </pre>
+   </code></pre>
 
   Insertion sort method:
 
@@ -530,8 +499,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     insert(2, 1 :: 3 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
     insert(1, 2 :: 3 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
     insert(3, 1 :: 2 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
-   </code>
-  </pre>
+   </code></pre>
 
   This method is interesting because the condition (cond boolean) to place a element is an anomymous function, and its body is another anonymous function (boolean). So we have to define its parameters x,y and integers and also its body as x<y. The (Int,Int) part do not define it, its only the cond type.
  <h3>Common Operations on Lists</h3>
@@ -546,8 +514,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     def sqrt(x: Double): Option[Double] =
       if (x < 0) None else Some(…)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Manipulating Options</h3>
 
   Use pattern matching to decompose options
@@ -559,8 +526,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
         case None => "no result"
         case Some(y) => y.toString
       }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Common Operations on Options</h3>
   .map(=>)
   .filter(=>)
@@ -581,8 +547,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     def sqrt(x: Double): Either[String, Double] =
       if (x < 0) Left("x must be positive")
       else Right(…)
-   </code>
-  </pre>
+   </code></pre>
 
   Either[A,B] have map and flatMap, but it transform the Right case only. "right biased".
 
@@ -599,8 +564,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       s"Hello, $name!"
 
     greet("Scala") shouldBe "Hello, Scala!"
-   </code>
-  </pre>
+   </code></pre>
 
   do not forget to prefix the string literal with "s"!!!
 
@@ -612,8 +576,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       s"Hello, ${name.toUpperCase}!"
 
     greet("Scala") shouldBe "Hello, SCALA!"
-   </code>
-  </pre>
+   </code></pre>
 
   IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
  <h3>Tuples</h3>
@@ -627,8 +590,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     val is: (Int, String) = (42, "foo")
     is._1 shouldBe 42
     is._2 shouldBe "foo"
-   </code>
-  </pre>
+   </code></pre>
  <h3>Functions as Objects</h3>
   Functions are objects with apply methods.
   <pre>
@@ -637,8 +599,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     trait Function1[A, B] {
       def apply(x: A): B
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Expansion of Function Values</h3>
   <pre>
    <code>
@@ -648,8 +609,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       }
       new AnonFun
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Expansion of Function Calls</h3>
   f(a,b) = f.apply(a, b)
  <h3>For Expressions</h3>
@@ -658,35 +618,30 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     /* xs.map(x => x + 1) */
     for (x <- xs) yield x + 1
-   </code>
-  </pre>
+   </code></pre>
   Filter
   <pre>
    <code>
     /* xs.filter(x => x % 2 == 0) */
     for (x <- xs if x % 2 == 0) yield x
-   </code>
-  </pre>
+   </code></pre>
   flatMap
   <pre>
    <code>
     /* xs.flatMap(x => ys.map(y => (x, y))) */
     for (x <- xs; y <- ys) yield (x, y)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Method's Parameters</h3>
   <pre>
    <code>
     Range(1, 10, 2)
-   </code>
-  </pre>
+   </code></pre>
   Can be rewritten
   <pre>
    <code>
     case class Range(start: Int, end: Int, step: Int)
     Range(start = 1, end = 10, step = 2)
-   </code>
-  </pre>
+   </code></pre>
   It's to set default values when defining the contructor, so the parameter can be omitted
    <pre>
     <code>
@@ -710,8 +665,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       else Right((dividend / divisor, dividend % divisor))
     divide(6, 4) shouldBe Right((1, 2))
     divide(2, 0) shouldBe Left("Division by zero")
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Object Oriented Programming</h2>
  <h3>Classes</h3>
@@ -740,16 +694,14 @@ Use the following pages to help you through your reading: <a href="https://www.s
       require(y > 0, "denominator must be positive")
       ...
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Assertions</h3>
   assert is used as to check the code of the function itself.
   <pre>
    <code>
     val x = sqrt(y)
     assert(x >= 0)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Constructors</h3>
  <h3>Operators</h3>
   as said before, operators are methods with symbolic identifiers. So you can override the operators for some types:
@@ -770,8 +722,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def * (r: Rational) = ...
       ...
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Precedence Rules</h3>
   Increasing priority
 
@@ -787,8 +738,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     + -
     * / %
     (all other special characters)
-   </code>
-  </pre>
+   </code></pre>
  <h3>Abstract Classes</h3>
 
   No instances of an abstract class can be created with the operator new.
@@ -798,8 +748,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <pre>
    <code>
     class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet {
-   </code>
-  </pre>
+   </code></pre>
   NonEmpty is a subclass and IntSet is its superclass.
   IntSet is a subclass of Object.
  <h3>Implementation and Overriding</h3>
@@ -814,8 +763,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       override def foo = 2
       def bar = 3
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Object Definitions</h3>
   When you need a single instance of a class (Empty for IntSet), you can create a singleton object named Empty. No other instances of it can be created. This type of object are values.
 
@@ -825,8 +773,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def contains(x: Int): Boolean = false
       def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
     }
-   </code>
-  </pre>
+   </code></pre>
  <h3>Traits</h3>
   use when you want to inherit code from more than one superclass.
   Defined just like an abstract class.
@@ -838,14 +785,12 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def width: Int
       def surface = height * width
     }
-   </code>
-  </pre>
+   </code></pre>
   classes,objects and traits can inherit from one class,but from many traits:
   <pre>
    <code>
     class Square extends Shape with Planar with Movable …
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Imperative Programming</h2>
  The substitution model of computation cannot be used.
@@ -868,8 +813,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       while (i > 0) { r = r * x; i = i - 1 }
       r
     }
-   </code>
-  </pre>
+   </code></pre>
   for-loops
    <pre>
     <code>
@@ -914,16 +858,14 @@ Used in order to write generic code (for values of different types) without comp
   <pre>
    <code>
     val xs = Stream.cons(1, Stream.cons(2, Stream.empty))
-   </code>
-  </pre>
+   </code></pre>
  <h3>Stream Ranges</h3>
   <pre>
    <code>
     def streamRange(lo: Int, hi: Int): Stream[Int] =
       if (lo >= hi) Stream.empty
       else Stream.cons(lo, streamRange(lo + 1, hi))
-   </code>
-  </pre>
+   </code></pre>
   It returns a single Stream type object with start as a head element. The others are only computed when needed.(tail called on stream)
 
   :: for lists
@@ -938,8 +880,7 @@ Used in order to write generic code (for values of different types) without comp
   <pre>
    <code>
     lazy val x = expr
-   </code>
-  </pre>
+   </code></pre>
  <h3>Lazy vals and streams</h3>
   Using a lazy value for tail, Stream.cons can be implemented more efficiently:
   <pre>
@@ -949,8 +890,7 @@ Used in order to write generic code (for values of different types) without comp
       lazy val tail = tl
       …
     }
-   </code>
-  </pre>
+   </code></pre>
 
  <h3>Nice exercice</h3>
   <pre>
@@ -959,12 +899,9 @@ Used in order to write generic code (for values of different types) without comp
     val x = { builder += 'x'; 1 }
     lazy val y = { builder += 'y'; 2 }
     def z = { builder += 'z'; 3 }
-
     z + y + x + z + y + x
-
     builder.result() shouldBe "xzyz"
-   </code>
-  </pre>
+   </code></pre>
 
 <h2>Type Classes</h2>
  How to use insertionSort for element types other than Int?
@@ -986,7 +923,6 @@ Used in order to write generic code (for values of different types) without comp
 
      … insert(y, insertionSort(ys)) …
    }
-  </code>
- </pre>
+  </code></pre>
 
 
