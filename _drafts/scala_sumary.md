@@ -263,13 +263,13 @@ Use the following pages to help you through your reading: <a href="https://www.s
   MCD oscillates and Factorial extends the number of elements on its expression.
  <h3>Tail Recursion</h3>
 
-  Is when the last action of a method is to call itself. In case of the factorial method, its not tail recursive because after calling itself with factorial(n-1) it has to multiply to n.
+  Is when the last action of a method is to call itself. In case of the factorial method, it's not tail recursive because after calling itself with factorial(n-1) it has to multiply to n.
 
   "Both factorial and gcd only call itself but in general, of course, a function could call other functions. So the generalization of tail recursion is that, if the last action of a function consists of calling another function, maybe the same, maybe some other function, the stack frame could be reused for both functions. Such calls are called tail calls."
 
   What is the stack frame?
 
-  Its possible to require that the following defined fuction is recursive using the @tailrec annotation. If the function were not tail recursive, it would pront an error.
+  It's possible to require that the following defined function is recursive using the @tailrec annotation. If the function were not tail recursive, it would prompt an error.
 
   Tail recursive factorial:
   <pre>
