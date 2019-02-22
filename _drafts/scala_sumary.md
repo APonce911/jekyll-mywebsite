@@ -73,8 +73,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <code>
    3 + 2 == 3.+(2)
    1.to(10) == 1 to 10
-  </code>
- </pre>
+  </code></pre>
 
  Each expression (or object) has a value and a type.
 
@@ -818,8 +817,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <pre>
     <code>
      for (i <- 1 until 3) { System.out.print(i + " ") }
-    </code>
-   </pre>
+    </code></pre>
 
 <h2>Classes vs Case Classes</h2>
  creating instances
@@ -830,8 +828,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <code>
    val aliceAccount = new BankAccount
    val c3 = Note("C", "Quarter", 3)
-  </code>
- </pre>
+  </code></pre>
 
  The same definition of BankAccount(class) create different objects (notion of identity), and the same definition of Note(case class) lead to equal values
 
