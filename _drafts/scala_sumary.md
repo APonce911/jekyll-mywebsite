@@ -1,5 +1,14 @@
-This is my small scala sumary. Syntax comparisons will be made mainly against ruby and javascript.
-Used the content of the following page https://www.scala-exercises.org/scala_tutorial
+---
+title: "Scala Tutorial"
+date: 2019-02-22 17:40:00
+lang: en
+ref: scala-tutorial
+
+---
+
+This is the small scala sumary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript. For Better readability, I will break this post into two parts.
+
+Use the following pages to help you through your reading: <a href="https://www.scala-exercises.org/scala_tutorial" target="_blank" class="external-link"> Scala-lang tutorial</a> and <a href="https://twitter.github.io/scala_school/" target="_blank" class="external-link"> Twitter Scala School</a>.
 
 <h2>Terms & types</h2>
  <h3>Primitive Expressions</h3>
@@ -14,22 +23,19 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   <pre>
    <code>
     1.572
-   </code>
-  </pre>
+   </code></pre>
   The boolean value "true"
   <pre>
    <code>
     true
-   </code>
-  </pre>
+   </code></pre>
   The text(String) "Hello"
   <pre>
    <code>
     "Hello"
-   </code>
-  </pre>
-  IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
- <h3></h3>Operators
+   </code></pre>
+  IMPORTANT! Strings on Scala are different from ruby, which accepts both ' and ". On Scala always use "" for strings.
+ <h3>Operators</h3>
   1 + 2 = 3
 
   1 and 2 are operands
@@ -40,12 +46,11 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
   "Hello, " and "Scala" are operands
   ++ is the operator
 
- <h3></h3>Method Calls
+ <h3>Method Calls</h3>
   <pre>
    <code>
     "hello".size
-   </code>
-  </pre>
+   </code></pre>
 
   "hello" is the target object
   size is the method
@@ -87,8 +92,7 @@ Used the content of the following page https://www.scala-exercises.org/scala_tut
    <code>
     def square(x: Double) = x * x
     def sumOfSquares(x: Double, y: Double) = square(x) + square(y)
-   </code>
-  </pre>
+   </code></pre>
 
   If a method is recursive, i.e. call for itself, you need to specify its return type
 
