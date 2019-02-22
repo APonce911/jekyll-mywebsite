@@ -132,7 +132,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
 <h2>Lexical Scopes</h2>
  <h3>Nested Functions</h3>
-  Are auxiliary functions defined inside the parent function. Used to isolate a function from the user, just like private functions.
+   Auxiliary functions are defined inside the parent function. Used to isolate a function from the user, just like private functions.
   <pre>
    <code>
     def sqrt(x: Double) = {
@@ -157,9 +157,9 @@ Use the following pages to help you through your reading: <a href="https://www.s
   - The definitions inside a block are only visible from within the block.
   - The definitions inside a block shadow definitions of the same names outside the block.
  <h3>Lexical Scoping</h3>
-  definitions outside blocks are visible inside unless they are shadowed.(Would it be shadowed when redefined, right?)
+  Definitions outside blocks are visible inside unless they are shadowed.(Would it be shadowed when redefined, right?)
 
-  refactorinng sqrt method:
+  refactoring sqrt method:
   <pre>
    <code>
     def sqrt(x: Double) = {
@@ -177,9 +177,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     }
    </code></pre>
  <h3>Semicolons</h3>
-  In most cases semicolons are optional.
-  Used when you have two statements in a single line
-  When you have 2 long expressions, you can overcome implicit ';' by putting the expressions inside () or by putting the operator(+) on the first line.
+  In most cases semicolons are optional. Used when you have two statements in a single line. When you have 2 long expressions, you can overcome implicit ';' by putting the expressions inside () or by putting the operator(+) on the first line.
   <pre>
    <code>
     someLongExpression +
@@ -187,7 +185,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
  <h3>Top-level Definitions</h3>
 
-  the Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
+  The Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
  <h3>Packages and Imports</h3>
   Top-level definitions can be organized an imported as packages
 
@@ -201,7 +199,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     }
    </code></pre>
 
-  when some definitions are not visible, you must use fully qualified names to refer them:
+  When some definitions are not visible, you must use fully qualified names to refer them:
 
   <pre>
    <code>
@@ -212,7 +210,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     }
    </code></pre>
 
-  here foo is a package(class?), Bar is an object and someMethod is a method
+  Here foo is a package(class?), Bar is an object and someMethod is a method
 
   you can also import an object to not repeat them:
 
