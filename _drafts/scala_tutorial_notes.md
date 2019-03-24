@@ -1,10 +1,12 @@
 ---
 title: "Scala Tutorial Notes"
 date: 2019-02-22 17:40:00
-lang: en
+lang: pt
 ref: scala-tutorial-notes
 
 ---
+
+Post not translated Yet. Comment bellow if you need the translation ASAP. :)
 
 This is the small Scala summary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript. For Better readability, I will break this post into two parts.
 

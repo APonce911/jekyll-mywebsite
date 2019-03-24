@@ -6,7 +6,7 @@ ref: scala-tutorial-notes
 
 ---
 
-This is the small Scala summary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript. For Better readability, I will break this post into two parts.
+This is the small Scala summary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript.
 
 Use the following pages to help you through your reading: <a href="https://www.scala-exercises.org/scala_tutorial" target="_blank" class="external-link"> Scala-lang tutorial</a> and <a href="https://twitter.github.io/scala_school/" target="_blank" class="external-link"> Twitter Scala School</a>.
 
