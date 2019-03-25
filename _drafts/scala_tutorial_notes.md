@@ -1,10 +1,12 @@
 ---
-title: "Scala Tutorial"
+title: "Scala Tutorial Notes"
 date: 2019-02-22 17:40:00
-lang: en
-ref: scala-tutorial
+lang: pt
+ref: scala-tutorial-notes
 
 ---
+
+Post not translated Yet. Comment bellow if you need the translation ASAP. :)
 
 This is the small Scala summary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript. For Better readability, I will break this post into two parts.
 
@@ -38,13 +40,11 @@ Use the following pages to help you through your reading: <a href="https://www.s
  <h3>Operators</h3>
   1 + 2 = 3
 
-  1 and 2 are operands
-  + is the operator
+  1 and 2 are operands, '+' is the operator
 
   "Hello, " ++ "Scala"
 
-  "Hello, " and "Scala" are operands
-  ++ is the operator
+  "Hello, " and "Scala" are operands, '++' is the operator
 
  <h3>Method Calls</h3>
   <pre>
@@ -59,8 +59,9 @@ Use the following pages to help you through your reading: <a href="https://www.s
   Method parameters are passed inside ().
 
   <h3>Expressions vs Statements</h3>
-  Expressions: What code is (value)
-  Statements: What code does (represent an action or command)
+  Expressions: What code is when evaluated. Returns a value.
+
+  Statements: represent an action or command to be executed.(What code does)
 
   <h3>Method vs Functions</h3>
   Methods: operate inside an object
@@ -79,10 +80,14 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
 <h2>Definitions & Evaluations</h2>
  <h3>Naming</h3>
-  Naming things gives more readability to your program
-  Use Val to define constants and Def to define methods.
+  Naming things gives more readability to your program.
+
+  Use 'Val' to define constants and 'Def' to define methods/functions.
+
   val = value
+
   def = definition
+
  <h3>Methods</h3>
   Can have one or more parameters, separated with ',', and with its respective types defined after a ':'.
   ex:
@@ -101,6 +106,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       if (n ==1) 0
       else factorial(n - 1) * n
    </code></pre>
+
  <h3>Evaluation</h3>
   The substitution model is an expression evaluation scheme. Used when the expression can be reduced to a value(not a loop).
 
@@ -156,6 +162,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   - Blocks are themselves expressions; a block may appear everywhere an expression can.
   - The definitions inside a block are only visible from within the block.
   - The definitions inside a block shadow definitions of the same names outside the block.
+
  <h3>Lexical Scoping</h3>
   Definitions outside blocks are visible inside unless they are shadowed.(Would it be shadowed when redefined, right?)
 
@@ -176,13 +183,15 @@ Use the following pages to help you through your reading: <a href="https://www.s
       sqrtIter(1.0)
     }
    </code></pre>
+
  <h3>Semicolons</h3>
-  In most cases semicolons are optional. Used when you have two statements in a single line. When you have 2 long expressions, you can overcome implicit ';' by putting the expressions inside () or by putting the operator(+) on the first line.
+  In most cases semicolons are optional. Used when you have two statements in a single line. When you have 2 long expressions, you can overcome implicit ';' by putting the expressions inside () or by putting the operator '+' on the first line.
   <pre>
    <code>
     someLongExpression +
       someOtherExpression
    </code></pre>
+
  <h3>Top-level Definitions</h3>
 
   The Object MyExecutableProgram has nested definitions (vals, defs & methods) and is called top-level because is not nested within another definition.
@@ -261,6 +270,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
   MCD oscillates and Factorial extends the number of elements on its expression.
+
  <h3>Tail Recursion</h3>
 
   Is when the last action of a method is to call itself. In case of the factorial method, it's not tail recursive because after calling itself with factorial(n-1) it has to multiply to n.
@@ -299,11 +309,16 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   we can create values(like objects or instances) of this type calling its constructor(Note(...))
 
-  val c3 = Note("C", "Quarter", 3)
+  <pre>
+   <code>
+    val c3 = Note("C", "Quarter", 3)
+   </code></pre>
 
   and we can access any property by using the dot notation, just like Ruby or Javascript.
+
  <h3>Defining Alternatives with Sealed Traits</h3>
-  a type(here, Symbol) is something that can only be embodied by a fixed set of alternatives.We can express it using the sealed trait definition.For example, a musical symbol can be a note or a rest:
+
+  A type(here, Symbol) is something that can only be embodied by a fixed set of alternatives. We can express it using the sealed trait definition.For example, a musical symbol can be a note or a rest:
 
   <pre>
    <code>
@@ -311,7 +326,9 @@ Use the following pages to help you through your reading: <a href="https://www.s
     case class Note(...) extends Symbol
     case class Rest(...) extends Symbol
    </code></pre>
+
  <h3>Pattern Matching</h3>
+
   Works like a case function. If the object matches a pattern(LHS) it execute an expression(RHS). The arrow symbol(=>) separates the parernt from the expressions.
 
   Used to to distinguish between the different cases of symbols.
@@ -325,13 +342,18 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
   Here, Note(...) and Rest(...) are constructor patterns and duration is called variable pattern.
+
  <h3>Exhaustivity</h3>
 
-  when not all cases of a Symbol are handled, the compiler informs us.
+  When not all cases of a Symbol are handled, the compiler informs us.
+
  <h3>Equals</h3>
-  Comparing instances of case classes you compare their values.
+
+  When comparing instances of case classes you compare their values.
   This is different from Ruby classes, where each instance is different from other, even if its properties are equal.
+
  <h3>Enumerations</h3>
+
   Fix a set of alternatives to a property.
 
   <pre>
@@ -343,30 +365,33 @@ Use the following pages to help you through your reading: <a href="https://www.s
     …
     case object G extends NoteName
    </code></pre>
+
  <h3>Algebraic Data Types</h3>
+
   if a part of a program can be formulated in terms of an <strong>is</strong> relationship, you will express it as a sealed trait:
   “A symbol is either a note or a rest.”
 
-  if it can be formulated in terms of an  <strong>has</strong> relationship,you will express it as a case class:
+  if it can be formulated in terms of an  <strong>has</strong> relationship, you will express it as a case class:
 
   “A note has a name, a duration and an octave number.”
+
  <h3>Observations</h3>
+
   case class != case object
 
-  case class is used to define a class(name, properties and parent(extends ...))
-  case object is used to restrict the values of a property
+  A case class is used to define a class(name, properties and parent(extends ...))
+   and a case object is used to restrict the values of a property
 
 <h2>Higher-Order Functions</h2>
 
  On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
 
  <h3>Motivation</h3>
-  its possible to factor out various recursive higher-order functions.
+
+  It's possible to factor out various recursive higher-order functions.
   Examples:
 
-  b>a
-
-  Sum all integers between a and b
+  Sum all integers between a and b ( b > a ):
   <pre>
    <code>
     def sumInts(a: Int, b: Int): Int =
@@ -386,8 +411,10 @@ Use the following pages to help you through your reading: <a href="https://www.s
     def sumFactorials(a: Int, b: Int): Int =
       if (a > b) 0 else factorial(a) + sumFactorials(a + 1, b)
    </code></pre>
+
  <h3>Summing with higher-order functions</h3>
-  the functions above can be summarized passing the respective function (id/cube/factorial) as a parameter to a higher order function (sum).
+
+  The functions above can be summarized passing the respective function (id/cube/factorial) as a parameter to a higher order function (sum).
 
   <pre>
    <code>
@@ -403,30 +430,40 @@ Use the following pages to help you through your reading: <a href="https://www.s
     def sumCubes(a: Int, b: Int) = sum(cube, a, b)
     def sumFactorials(a: Int, b: Int) = sum(factorial, a, b)
    </code></pre>
+
  <h3>Functions Types</h3>
   A => B
+
   A argument
+
   returns B
+
  <h3>Anonymous Functions</h3>
   Function literal. i.e. dont need to define a name for it
+
   Anonymous cube function:
   <pre>
    <code>
     (x: int) => x * x * x
    </code></pre>
 
-  (...) is the parameter
-   x * x * x is the body
-  the type of the parameter can be omitted. Multiple parameters are separated by commas.
+  (...) is the parameter and x * x * x is the body.
+
+  The type of the parameter can be omitted. Multiple parameters are separated by commas.
+
  <h3>Syntactic Sugar</h3>
-  are functions defined as below:
+
+  Are functions defined as below:
   why they are used? I don't know...
+
   <pre>
    <code>
     { def funcName(x1: T1, …, xn: Tn) = e ; funcName }
    </code></pre>
+
  <h3>Summation with Anonymous Functions</h3>
-  the respective functions(id/cube) are not defined and passed as parameters anymore. They are passed as literals on the higher order function (sum).
+
+  The respective functions(id/cube) are not defined and passed as parameters anymore. They are passed as literals on the higher order function (sum).
   <pre>
    <code>
     def sumInts(a: Int, b: Int) = sum(x => x, a, b)
@@ -434,11 +471,15 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
 <h2>Standard Library</h2>
+
  <h3>Lists</h3>
   They seems like an array, but they are not.
-  they cannot be changes(immutable)
-  they are recursive
-  they are homogeneous; All elements have the same type
+
+  - They cannot be changed(immutable).
+
+  - They are recursive.
+
+  - They are homogeneous; All elements have the same type
 
   Ex:
 
@@ -449,13 +490,14 @@ Use the following pages to help you through your reading: <a href="https://www.s
     val diag3: List[List[Int]] = List(List(1, 0, 0), List(0, 1, 0), List(0, 0, 1))
     val empty: List[Nothing] = List()
    </code></pre>
+
  <h3>Constructors of Lists</h3>
   All lists are construted from:
-  -the empty list nil
-  -the construction operator(cons) ::
-  x::xs gives a list with the first element x followed by the elements of xs, which is a list itself
+  - The empty list nil
+  - The construction operator(cons) ::
+  - x::xs gives a list with the first element x followed by the elements of xs, which is a list itself
 
-  we use the cons operator because its the only way to add an element to a list. There is no .push method.
+  We use the cons operator because its the only way to add an element to a list. There is no .push method.
   <pre>
    <code>
     val nums = 1 :: 2 :: 3 :: 4 :: Nil
@@ -465,6 +507,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     val nums = Nil.::(4).::(3).::(2).::(1)
    </code></pre>
+
  <h3>Manipulating Lists</h3>
   It's possible to decompose lists with pattern matching:
   <pre>
@@ -502,12 +545,16 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
   This method is interesting because the condition (cond boolean) to place a element is an anomymous function, and its body is another anonymous function (boolean). So we have to define its parameters x,y and integers and also its body as x<y. The (Int,Int) part do not define it, its only the cond type.
+
  <h3>Common Operations on Lists</h3>
   .map(anonymous func)
+
   .filter(anonymous func)
+
   .flatMap{anonymous func}
+
  <h3>Optional Values</h3>
-  Use options when you dont have a defined return type.
+  Use options when you don't have a defined return type.
   Partially defined functions:
 
   <pre>
@@ -517,7 +564,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
  <h3>Manipulating Options</h3>
 
-  Use pattern matching to decompose options
+  Use pattern matching to decompose options:
 
   <pre>
    <code>
@@ -527,16 +574,20 @@ Use the following pages to help you through your reading: <a href="https://www.s
         case Some(y) => y.toString
       }
    </code></pre>
+
  <h3>Common Operations on Options</h3>
+
   .map(=>)
+
   .filter(=>)
+
   .flatMap(=>)
+
  <h3>Error Handling</h3>
   Try[A], represents a computation that attempted to return an A.
   Can be Success[A] or Failure;
 
-  None x Failure
-  Failure provide a reason of the failure
+  None x Failure: Failure provide a reason of the failure.
 
   Try[A] also have map, filter and flatMap
 
@@ -580,7 +631,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
  <h3>Tuples</h3>
-  work as a conjuntion of elements, and they can have different types.
+  Work as a conjuntion of elements, and they can have different types.
   More generally, a type (T1, …, Tn) is a tuple type of n elements whose ith element has type Ti.
 
   You can retrieve the elements of a tuple using tuple pattern, or you can identify the member by its position (_i)
@@ -591,6 +642,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     is._1 shouldBe 42
     is._2 shouldBe "foo"
    </code></pre>
+
  <h3>Functions as Objects</h3>
   Functions are objects with apply methods.
   <pre>
@@ -631,6 +683,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     /* xs.flatMap(x => ys.map(y => (x, y))) */
     for (x <- xs; y <- ys) yield (x, y)
    </code></pre>
+
  <h3>Method's Parameters</h3>
   <pre>
    <code>
@@ -642,7 +695,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     case class Range(start: Int, end: Int, step: Int)
     Range(start = 1, end = 10, step = 2)
    </code></pre>
-  It's to set default values when defining the contructor, so the parameter can be omitted
+  It's to set default values when defining the contructor, so the parameter can be omitted.
    <pre>
     <code>
      case class Range(start: Int, end: Int, step: Int = 1)
@@ -656,6 +709,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       (x :: xs.to[List]).sum.toDouble / (xs.size + 1)
     </code>
    </pre>
+
  <h3>Type Aliases</h3>
   <pre>
    <code>
@@ -670,16 +724,20 @@ Use the following pages to help you through your reading: <a href="https://www.s
 <h2>Object Oriented Programming</h2>
  <h3>Classes</h3>
 
-  a class define a new constructor, and a new type.
+  A class define a new constructor, and a new type.
+
  <h3>Objects</h3>
   Objects are the elements of a class type.
   Use the operator 'new' to create an object.
+
  <h3>Members of an Object</h3>
   Just like a property of a Ruby object, you can get the member of an object
   with the infix operator '.'
+
  <h3>Methods</h3>
    A package of functions operating on a data abstraction in the data abstraction itself.
    i.e. defined inside the class definition.
+
  <h3>Data Abstraction</h3>
  <h3>Self Reference</h3>
 
@@ -687,7 +745,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
  <h3>Preconditions</h3>
   require is used to enforce a precondition on the caller of a function.
 
-  require function
+  require function:
   <pre>
    <code>
     class Rational(x: Int, y: Int) {
@@ -695,6 +753,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       ...
     }
    </code></pre>
+
  <h3>Assertions</h3>
   assert is used as to check the code of the function itself.
   <pre>
@@ -702,9 +761,10 @@ Use the following pages to help you through your reading: <a href="https://www.s
     val x = sqrt(y)
     assert(x >= 0)
    </code></pre>
+
  <h3>Constructors</h3>
  <h3>Operators</h3>
-  as said before, operators are methods with symbolic identifiers. So you can override the operators for some types:
+  As said before, operators are methods with symbolic identifiers. So you can override the operators for some types:
 
   <pre>
    <code>
@@ -723,8 +783,9 @@ Use the following pages to help you through your reading: <a href="https://www.s
       ...
     }
    </code></pre>
+
  <h3>Precedence Rules</h3>
-  Increasing priority
+  Increasing priority:
 
   <pre>
    <code>
@@ -739,9 +800,11 @@ Use the following pages to help you through your reading: <a href="https://www.s
     * / %
     (all other special characters)
    </code></pre>
+
  <h3>Abstract Classes</h3>
 
   No instances of an abstract class can be created with the operator new.
+
  <h3>Class Extensions</h3>
   subclasses extends superclass:
 
@@ -751,6 +814,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
   NonEmpty is a subclass and IntSet is its superclass.
   IntSet is a subclass of Object.
+
  <h3>Implementation and Overriding</h3>
   <pre>
    <code>
@@ -764,6 +828,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def bar = 3
     }
    </code></pre>
+
  <h3>Object Definitions</h3>
   When you need a single instance of a class (Empty for IntSet), you can create a singleton object named Empty. No other instances of it can be created. This type of object are values.
 
@@ -774,10 +839,10 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
     }
    </code></pre>
+
  <h3>Traits</h3>
   use when you want to inherit code from more than one superclass.
   Defined just like an abstract class.
-  OBS
   <pre>
    <code>
     trait Planar {
@@ -786,25 +851,29 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def surface = height * width
     }
    </code></pre>
-  classes,objects and traits can inherit from one class,but from many traits:
+  OBS: classes,objects and traits can inherit from one class,but from many traits:
   <pre>
    <code>
     class Square extends Shape with Planar with Movable …
    </code></pre>
 
 <h2>Imperative Programming</h2>
+
  The substitution model of computation cannot be used.
  The state of an object depend on its history.
- use 'var' to create a variable definition .
- use '=' to assign a new value to a variable.
+ Use 'var' to create a variable definition .
+ Use '=' to assign a new value to a variable.
+
  <h3>State in Objects</h3>
   Stateful objects
   Objects with state have some variable members. Ex: a Bank Account
+
  <h3>Operational Equivalence</h3>
 
   After a sequence of testing, and the results are same, there is operational equivalence.
+
  <h3>Imperative Loops</h3>
-  while loops
+  while loops:
   <pre>
    <code>
     def power(x: Double, exp: Int): Double = {
@@ -814,16 +883,18 @@ Use the following pages to help you through your reading: <a href="https://www.s
       r
     }
    </code></pre>
-  for-loops
+  for-loops:
    <pre>
     <code>
      for (i <- 1 until 3) { System.out.print(i + " ") }
     </code></pre>
 
 <h2>Classes vs Case Classes</h2>
- creating instances
- class: require the keyword new
- case class: constructor parameters are promoted to members
+ Creating instances:
+
+ - class: require the keyword new
+
+ - case class: constructor parameters are promoted to members
 
  <pre>
   <code>
@@ -831,33 +902,40 @@ Use the following pages to help you through your reading: <a href="https://www.s
    val c3 = Note("C", "Quarter", 3)
   </code></pre>
 
- The same definition of BankAccount(class) create different objects (notion of identity), and the same definition of Note(case class) lead to equal values
+ The same definition of BankAccount(class) create different objects (notion of identity), and the same definition of Note(case class) lead to equal values.
 
- pattern matching does not work on regular classes.
+ Pattern matching does not work on regular classes.
 
  A case class cannot extend another case class.
 
- A case class is a special case of a class, with predifined overriting on some properties(parameters are promoted to members;Equality redefinition;Java hashCode redefinition;toString redefinition;Create a copy of a case class;Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
+ A case class is a special case of a class, with predifined overriting on some properties(parameters are promoted to members; Equality redefinition; Java hashCode redefinition; toString redefinition; Create a copy of a case class; Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
 
 <h2>Polymorphic Types</h2>
+
  Used in order to write generic code (for values of different types) without compromising static typing richness.
 
 
  Upper Bounds
+
  A <: B means: A is a subtype of B, and
+
  A >: B means: A is a supertype of B, or B is a subtype of A.
 
  Lower Bounds
+
  A >: Reptile
 
 <h2>Lazy Evaluation</h2>
  <h3>Delayed Evaluation</h3>
+
   Streams are similar to lists, but their tail is evaluated only in demand.
+
  <h3>Defining Streams</h3>
   <pre>
    <code>
     val xs = Stream.cons(1, Stream.cons(2, Stream.empty))
    </code></pre>
+
  <h3>Stream Ranges</h3>
   <pre>
    <code>
@@ -868,11 +946,13 @@ Use the following pages to help you through your reading: <a href="https://www.s
   It returns a single Stream type object with start as a head element. The others are only computed when needed.(tail called on stream)
 
   :: for lists
+
   ::# for streams
 
   on Stream cons the second parameter(tl) is evaluated by call-by-name rules(=>)
 
   The other methods are same as List (filter,map,flatMap)
+
  <h3>Lazy Evaluation</h3>
   if tail is called many times, it will be recomputed each time. To avoid this we must store the result of the first evaluation of tail.
 
@@ -903,11 +983,14 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
 <h2>Type Classes</h2>
+
  How to use insertionSort for element types other than Int?
- '<' operator not defined for arbitrary types...
+'<' operator not defined for arbitrary types...
+
  Parametrize lessThan function (comparison operation)
 
  But there is a class in standard library that represents orderings:
+
  scala.math.Ordering
 
  We can define insertionSort with ordering, but it is too repetitive.
