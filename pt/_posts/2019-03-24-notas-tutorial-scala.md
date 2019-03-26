@@ -8,7 +8,8 @@ ref: scala-tutorial-notes
 
 Esse post ainda não foi traduzido. Comente nesse link se você precisa da tradução ASAP :)
 
-This is the small Scala summary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript. For Better readability, I will break this post into two parts.
+
+This is the small Scala summary I have made while reading the language tutorial. My goal is to make this post as alive as possible, as I learn more things about the language. Syntax comparisons will be made mainly against ruby and javascript.
 
 Use the following pages to help you through your reading: <a href="https://www.scala-exercises.org/scala_tutorial" target="_blank" class="external-link"> Scala-lang tutorial</a> and <a href="https://twitter.github.io/scala_school/" target="_blank" class="external-link"> Twitter Scala School</a>.
 
@@ -61,7 +62,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   <h3>Expressions vs Statements</h3>
   Expressions: What code is when evaluated. Returns a value.
 
-  Statements: represent an action or command to be executed.(What code does)
+  Statements: represent an action or command to be executed. (What code does)
 
   <h3>Method vs Functions</h3>
   Methods: operate inside an object
@@ -164,7 +165,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   - The definitions inside a block shadow definitions of the same names outside the block.
 
  <h3>Lexical Scoping</h3>
-  Definitions outside blocks are visible inside unless they are shadowed.(Would it be shadowed when redefined, right?)
+  Definitions outside blocks are visible inside unless they are shadowed. (Would it be shadowed when redefined, right?)
 
   refactoring sqrt method:
   <pre>
@@ -318,7 +319,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
  <h3>Defining Alternatives with Sealed Traits</h3>
 
-  A type(here, Symbol) is something that can only be embodied by a fixed set of alternatives. We can express it using the sealed trait definition.For example, a musical symbol can be a note or a rest:
+  A type(here, Symbol) is something that can only be embodied by a fixed set of alternatives. We can express it using the sealed trait definition. For example, a musical symbol can be a note or a rest:
 
   <pre>
    <code>
@@ -329,9 +330,9 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
  <h3>Pattern Matching</h3>
 
-  Works like a case function. If the object matches a pattern(LHS) it execute an expression(RHS). The arrow symbol(=>) separates the parernt from the expressions.
+  Works as a case function. If the object matches a pattern(LHS) it executes an expression(RHS). The arrow symbol(=>) separates the pattern from the expressions.
 
-  Used to to distinguish between the different cases of symbols.
+  Used to distinguish between the different cases of symbols.
   <pre>
    <code>
     def symbolDuration(symbol: Symbol): String =
@@ -350,7 +351,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
  <h3>Equals</h3>
 
   When comparing instances of case classes you compare their values.
-  This is different from Ruby classes, where each instance is different from other, even if its properties are equal.
+  This is different from Ruby classes, where each instance is different from others, even if its properties are equal.
 
  <h3>Enumerations</h3>
 
@@ -373,18 +374,18 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   if it can be formulated in terms of an  <strong>has</strong> relationship, you will express it as a case class:
 
-  “A note has a name, a duration and an octave number.”
+  “A note has a name, a duration, and an octave number.”
 
  <h3>Observations</h3>
 
   case class != case object
 
-  A case class is used to define a class(name, properties and parent(extends ...))
+  A case class is used to define a class(name, properties, and parent(extends ...))
    and a case object is used to restrict the values of a property
 
 <h2>Higher-Order Functions</h2>
 
- On functional languages functions are trated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher order functions.
+ On functional languages functions are treated as first-class values, meaning they can be passed as parameters and returned as a result. Those are named higher-order functions.
 
  <h3>Motivation</h3>
 
@@ -439,7 +440,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
   returns B
 
  <h3>Anonymous Functions</h3>
-  Function literal. i.e. dont need to define a name for it
+  Function literal. i.e. don't need to define a name for it
 
   Anonymous cube function:
   <pre>
@@ -473,7 +474,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 <h2>Standard Library</h2>
 
  <h3>Lists</h3>
-  They seems like an array, but they are not.
+  They seem like an array, but they are not.
 
   - They cannot be changed(immutable).
 
@@ -492,7 +493,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
  <h3>Constructors of Lists</h3>
-  All lists are construted from:
+  All lists are constructed from:
   - The empty list nil
   - The construction operator(cons) ::
   - x::xs gives a list with the first element x followed by the elements of xs, which is a list itself
@@ -544,7 +545,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     insert(3, 1 :: 2 :: Nil) shouldBe (1 :: 2 :: 3 :: Nil)
    </code></pre>
 
-  This method is interesting because the condition (cond boolean) to place a element is an anomymous function, and its body is another anonymous function (boolean). So we have to define its parameters x,y and integers and also its body as x<y. The (Int,Int) part do not define it, its only the cond type.
+  This method is interesting because the condition (cond boolean) to place an element is an anonymous function, and its body is another anonymous function (boolean). So we have to define its parameters x,y and integers and also its body as x<y. The (Int,Int) part do not define it, its only the cond type.
 
  <h3>Common Operations on Lists</h3>
   .map(anonymous func)
@@ -589,7 +590,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   None x Failure: Failure provide a reason of the failure.
 
-  Try[A] also have map, filter and flatMap
+  Try[A] also have map, filter ,and flatMap
 
   Either[A,B], represents a value that can either be type A or type B, and can be decomposed in two cases: Left and Right.
 
@@ -600,13 +601,13 @@ Use the following pages to help you through your reading: <a href="https://www.s
       else Right(…)
    </code></pre>
 
-  Either[A,B] have map and flatMap, but it transform the Right case only. "right biased".
+  Either[A,B] have map and flatMap, but it transforms the Right case only. "right biased".
 
   Either[A,B] has a filterOrElse method, it transforms a Right value into Left value if it does not satisfy a given predicate.
 
-  Prior to Scala 2.12, Either was unbiased, so you had to specity the side you wanted to transform.
+  Prior to Scala 2.12, Either was unbiased, so you had to specify the side you wanted to transform.
 
-<h2>Syntatic Conveniences</h2>
+<h2>Syntactic Conveniences</h2>
  <h3>String Interpolation</h3>
 
   <pre>
@@ -631,7 +632,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   IMPORTANT! Strings on Scala are different from ruby, which accepts both '' and "". On Scala always use "" for strings.
  <h3>Tuples</h3>
-  Work as a conjuntion of elements, and they can have different types.
+  Work as a conjunction of elements, and they can have different types.
   More generally, a type (T1, …, Tn) is a tuple type of n elements whose ith element has type Ti.
 
   You can retrieve the elements of a tuple using tuple pattern, or you can identify the member by its position (_i)
@@ -689,20 +690,20 @@ Use the following pages to help you through your reading: <a href="https://www.s
    <code>
     Range(1, 10, 2)
    </code></pre>
-  Can be rewritten
+  Can be rewritten:
   <pre>
    <code>
     case class Range(start: Int, end: Int, step: Int)
     Range(start = 1, end = 10, step = 2)
    </code></pre>
-  It's to set default values when defining the contructor, so the parameter can be omitted.
+  It's to set default values when defining the constructor, so the parameter can be omitted.
    <pre>
     <code>
      case class Range(start: Int, end: Int, step: Int = 1)
     </code>
    </pre>
 
-   Undefined number of parameters.
+   with an undefined number of parameters:
    <pre>
     <code>
      def average(x: Int, xs: Int*): Double =
@@ -721,10 +722,10 @@ Use the following pages to help you through your reading: <a href="https://www.s
     divide(2, 0) shouldBe Left("Division by zero")
    </code></pre>
 
-<h2>Object Oriented Programming</h2>
+<h2>Object-Oriented Programming</h2>
  <h3>Classes</h3>
 
-  A class define a new constructor, and a new type.
+  A class defines a new constructor and a new type.
 
  <h3>Objects</h3>
   Objects are the elements of a class type.
@@ -755,7 +756,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
    </code></pre>
 
  <h3>Assertions</h3>
-  assert is used as to check the code of the function itself.
+  assert is used to check the code of the function itself.
   <pre>
    <code>
     val x = sqrt(y)
@@ -851,7 +852,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
       def surface = height * width
     }
    </code></pre>
-  OBS: classes,objects and traits can inherit from one class,but from many traits:
+  OBS: classes, objects, and traits can inherit from one class, but from many traits:
   <pre>
    <code>
     class Square extends Shape with Planar with Movable …
@@ -861,7 +862,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
  The substitution model of computation cannot be used.
  The state of an object depend on its history.
- Use 'var' to create a variable definition .
+ Use 'var' to create a variable definition.
  Use '=' to assign a new value to a variable.
 
  <h3>State in Objects</h3>
@@ -870,7 +871,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
  <h3>Operational Equivalence</h3>
 
-  After a sequence of testing, and the results are same, there is operational equivalence.
+  After a sequence of testing, and the results are the same, there is an operational equivalence.
 
  <h3>Imperative Loops</h3>
   while loops:
@@ -902,13 +903,13 @@ Use the following pages to help you through your reading: <a href="https://www.s
    val c3 = Note("C", "Quarter", 3)
   </code></pre>
 
- The same definition of BankAccount(class) create different objects (notion of identity), and the same definition of Note(case class) lead to equal values.
+ The same definition of BankAccount(class) create different objects (the notion of identity), and the same definition of Note(case class) lead to equal values.
 
- Pattern matching does not work on regular classes.
+ Pattern matching does not work in regular classes.
 
  A case class cannot extend another case class.
 
- A case class is a special case of a class, with predifined overriting on some properties(parameters are promoted to members; Equality redefinition; Java hashCode redefinition; toString redefinition; Create a copy of a case class; Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
+ A case class is a special case of a class, with predefined overriding on some properties(parameters are promoted to members; Equality redefinition; Java hashCode redefinition; toString redefinition; Create a copy of a case class; Constructor that allows the omission of the `new` keyword; Extractor for pattern matching).
 
 <h2>Polymorphic Types</h2>
 
@@ -951,17 +952,17 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
   on Stream cons the second parameter(tl) is evaluated by call-by-name rules(=>)
 
-  The other methods are same as List (filter,map,flatMap)
+  The other methods are the same as List (filter, map, flatMap)
 
  <h3>Lazy Evaluation</h3>
-  if tail is called many times, it will be recomputed each time. To avoid this we must store the result of the first evaluation of tail.
+  if the tail is called many times, it will be recomputed each time. To avoid this we must store the result of the first evaluation of the tail.
 
   <pre>
    <code>
     lazy val x = expr
    </code></pre>
  <h3>Lazy vals and streams</h3>
-  Using a lazy value for tail, Stream.cons can be implemented more efficiently:
+  Using a lazy value for the tail, Stream.cons can be implemented more efficiently:
   <pre>
    <code>
     def cons[T](hd: T, tl: => Stream[T]) = new Stream[T] {
@@ -971,7 +972,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
     }
    </code></pre>
 
- <h3>Nice exercice</h3>
+ <h3>Nice exercise</h3>
   <pre>
    <code>
     val builder = new StringBuilder
@@ -989,7 +990,7 @@ Use the following pages to help you through your reading: <a href="https://www.s
 
  Parametrize lessThan function (comparison operation)
 
- But there is a class in standard library that represents orderings:
+ But there is a class in the standard library that represents orderings:
 
  scala.math.Ordering
 
