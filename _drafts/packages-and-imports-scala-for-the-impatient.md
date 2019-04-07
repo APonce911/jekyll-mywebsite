@@ -19,6 +19,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
   - Import statements can be anywhere.
   - Import statements can rename and hide members.
   - java.lang, scala, and Predef are always imported.
+
 <h3>Packages</h3>
 
   To add items to a package, you can include them in package statements, such as:
@@ -67,11 +68,60 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       }
   </code></pre>
 
-We can use Utils.percentOf instead com com.horstmann.Utils.percentOf because its used inside the parent scope.
+  We can use Utils.percentOf instead com com.horstmann.Utils.percentOf because its used inside the parent scope.
+
+  If a package is defined with a conflicting name (Ex: collection vs scala.collection), one solution is to use absolute package names. Another approach is to use chained package clauses.
 
 <h3>Chained Package Clauses</h3>
+  <pre>
+    <code>
+      package com {
+        package horstmann {
+          package collection {
+          ...
+          }
+        }
+      }
+  </code></pre>
+
+Instead of using the above example, we can use the following way, so com.horstmann.collection package would no longer be accessible as collection:
+
+  <pre>
+    <code>
+      package com.horstmann.collection {
+      // Members of com and com.horstmann are not visible here
+        }
+      }
+    </code></pre>
+
 <h3>Top-of-File Notation</h3>
+
+Insead of the nested notations presented until now, we can use a cleaned notation without braces:
+
+<pre>
+  <code>
+    package com.horstmann.impatient
+    package people
+    class Person
+    ...
+  </code></pre>
+
+is equivalent to:
+
+<pre>
+  <code>
+    package com.horstmann.impatient {
+      package people {
+        class Person
+        ...
+        // Until the end of the file
+      }
+    }
+  </code></pre>
+
 <h3>Package Objects</h3>
+
+
 <h3>Package Visibility</h3>
 <h3>Imports</h3>
 <h3>Imports Can Be Anywhere</h3>
