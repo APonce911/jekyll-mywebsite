@@ -84,7 +84,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       }
   </code></pre>
 
-Instead of using the above example, we can use the following way, so com.horstmann.collection package would no longer be accessible as collection:
+  Instead of using the above example, we can use the following way, so com.horstmann.collection package would no longer be accessible as collection:
 
   <pre>
     <code>
@@ -96,31 +96,48 @@ Instead of using the above example, we can use the following way, so com.horstma
 
 <h3>Top-of-File Notation</h3>
 
-Insead of the nested notations presented until now, we can use a cleaned notation without braces:
+  Insead of the nested notations presented until now, we can use a cleaned notation without braces:
+
+  <pre>
+    <code>
+      package com.horstmann.impatient
+      package people
+      class Person
+      ...
+    </code></pre>
+
+  is equivalent to:
+
+  <pre>
+    <code>
+      package com.horstmann.impatient {
+        package people {
+          class Person
+          ...
+          // Until the end of the file
+        }
+      }
+    </code></pre>
+
+<h3>Package Objects</h3>
+
+Packages can contain classes objects and traits, but not fuctions or variables. To address this issue we can use package objects.
+
+Every package can have its package object, and it should be defined inside the parent.
 
 <pre>
   <code>
     package com.horstmann.impatient
-    package people
-    class Person
-    ...
-  </code></pre>
-
-is equivalent to:
-
-<pre>
-  <code>
-    package com.horstmann.impatient {
-      package people {
-        class Person
-        ...
-        // Until the end of the file
+      package object people {
+        val defaultName = "John Q. Public"
       }
+      package people {
+        class Person {
+          var name = defaultName // A constant from the package
+      }
+      ...
     }
   </code></pre>
-
-<h3>Package Objects</h3>
-
 
 <h3>Package Visibility</h3>
 <h3>Imports</h3>
