@@ -5,9 +5,44 @@ lang: en
 ref: packages-and-imports-sfti
 
 ---
-This is my small contribution to Gympass Scala study group. Scala for the impatient, chapter 7 Packages and imports.
+This is my small contribution to Gympass' Scala study group. Scala for the impatient, chapter 7: Packages and Imports.
+
 <h2>Packages and Imports</h2>
+
+  In this chapter the author presents how packages and import statements work in Scala. Key Points are:
+  - Packages nest just like inner classes.
+  - Package paths are not absolute.
+  - A chain x.y.z in a package clause leaves the intermediate packages x and x.y invisible.
+  - Package statements without braces at the top of the file extend to the entire file.
+  - A package object can hold functions and variables.
+  - Import statements can import packages, classes, and objects.
+  - Import statements can be anywhere.
+  - Import statements can rename and hide members.
+  - java.lang, scala, and Predef are always imported.
 <h3>Packages</h3>
+
+  To add items to a package, you can include them in package statements, such as:
+  <pre>
+    <code>
+      package com {
+        package horstmann {
+          package impatient {
+            class Employee
+            ...
+          }
+        }
+      }
+    </code></pre>
+
+  Then the class name Employee can be accessed anywhere as com.horstmann.impatient.
+  Employee.
+
+  Unlike Classes or objects definitions, packages can be defined in multiple files.Ex Manager class on package com.horstmann.impatient.manager
+
+  OBS: there is no enforced relationship between the source file and the package. employee.scala doesn't have to be on com/horstmann/impatient directory.
+
+  You can contribute to more then on package in a single file.
+
 <h3>chained Package Clauses</h3>
 <h3>Top-of-File Notation</h3>
 <h3>Package Objects</h3>
