@@ -43,7 +43,33 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
   You can contribute to more then on package in a single file.
 
-<h3>chained Package Clauses</h3>
+<h3>Scope Rules</h3>
+
+  Everything defined inside the parent package can be used without the full package referente. Ex:
+
+  <pre>
+    <code>
+      package com {
+        package horstmann {
+          object Utils {
+            def percentOf(value: Double, rate: Double) = value * rate / 100
+            ...
+          }
+          package impatient {
+            class Employee {
+              ...
+              def giveRaise(rate: scala.Double) {
+                salary += Utils.percentOf(salary, rate)
+              }
+            }
+          }
+        }
+      }
+  </code></pre>
+
+We can use Utils.percentOf instead com com.horstmann.Utils.percentOf because its used inside the parent scope.
+
+<h3>Chained Package Clauses</h3>
 <h3>Top-of-File Notation</h3>
 <h3>Package Objects</h3>
 <h3>Package Visibility</h3>
