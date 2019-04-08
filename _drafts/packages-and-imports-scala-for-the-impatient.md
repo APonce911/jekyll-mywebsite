@@ -9,7 +9,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h2>Packages and Imports</h2>
 
-  In this chapter the author presents how packages and import statements work in Scala. Key Points are:
+  In this chapter, the author presents how packages and import statements work in Scala. Key Points are:
   - Packages nest just like inner classes.
   - Package paths are not absolute.
   - A chain x.y.z in a package clause leaves the intermediate packages x and x.y invisible.
@@ -38,15 +38,15 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
   Then the class name Employee can be accessed anywhere as com.horstmann.impatient.
   Employee.
 
-  Unlike Classes or objects definitions, packages can be defined in multiple files.Ex Manager class on package com.horstmann.impatient.manager
+  Unlike Classes or objects definitions, packages can be defined in multiple files.(Ex: Manager class on package com.horstmann.impatient.manager)
 
   OBS: there is no enforced relationship between the source file and the package. employee.scala doesn't have to be on com/horstmann/impatient directory.
 
-  we can contribute to more then on package in a single file.
+  we can contribute to more than one package in a single file.
 
 <h3>Scope Rules</h3>
 
-  Everything defined inside the parent package can be used without the full package referente. Ex:
+  Everything defined inside the parent package can be used without the full package reference. Ex:
 
   <pre>
     <code>
@@ -68,7 +68,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       }
   </code></pre>
 
-  We can use Utils.percentOf instead com com.horstmann.Utils.percentOf because its used inside the parent scope.
+  We can use Utils.percentOf instead of com com.horstmann.Utils.percentOf because it is used inside the parent scope.
 
   If a package is defined with a conflicting name (Ex: collection vs scala.collection), one solution is to use absolute package names. Another approach is to use chained package clauses.
 
@@ -84,7 +84,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       }
   </code></pre>
 
-  Instead of using the above example, we can use the following way, so com.horstmann.collection package would no longer be accessible as collection:
+  Instead of using the above example, we can use the following way, so com.horstmann.collection package would no longer be accessible as 'collection':
 
   <pre>
     <code>
@@ -96,7 +96,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Top-of-File Notation</h3>
 
-  Insead of the nested notations presented until now, we can use a cleaned notation without braces:
+  Instead of the nested notations presented until now, we can use a cleaned notation without braces:
 
   <pre>
     <code>
@@ -121,7 +121,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Package Objects</h3>
 
-  Packages can contain classes objects and traits, but not fuctions or variables. To address this issue we can use package objects.
+  Packages can contain classes objects and traits, but not functions or variables. To address this issue we can use package objects.
 
   Every package can have its package object, and it should be defined inside the parent.
 
@@ -161,7 +161,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Imports</h3>
 
-  If we import packages, we can use shorter names instead of longer ones by bringing it into scope.(Ex: Color instead of java.awt.Color after importing it)
+  If we import packages, we can use shorter names instead of longer ones by bringing them into scope. (Ex: Color instead of java.awt.Color after importing it)
 
   To import all members of a package use the wildcard ._ (Ex: import java.awt._)
 
@@ -172,14 +172,14 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
   It is helpful to reduce potential conflicts.
 
 <h3>Renaming and Hiding Members</h3>
-  To import a few member from a package, we  can use a selector:
+  To import a few members from a package, we  can use a selector:
 
   <pre>
     <code>
       import java.awt.{Color, Font}
     </code></pre>
 
-  On selectors we can rename members using =>
+  On selectors, we can rename members using =>
   <pre>
     <code>
       import java.util.{HashMap => JavaHashMap}
@@ -187,7 +187,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Implicit Imports</h3>
 
-  Every scala program starts with:
+  Every Scala program starts with:
 
   <pre>
     <code>
@@ -196,4 +196,4 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       import Predef._
     </code></pre>
 
-  OBS: some scala package members override the java correspondents.(Ex: StringBuilder)
+  OBS: some scala package members override the java correspondents. (Ex: StringBuilder)
