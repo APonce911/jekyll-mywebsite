@@ -166,5 +166,34 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
   To import all members of a package use the wildcard ._ (Ex: import java.awt._)
 
 <h3>Imports Can Be Anywhere</h3>
+
+  Imports can be anywhere inside a Scala file, not only on top. The scope extends until the end of the enclosing block.
+
+  It is helpful to reduce potential conflicts.
+
 <h3>Renaming and Hiding Members</h3>
+  To import a few member from a package, we  can use a selector:
+
+  <pre>
+    <code>
+      import java.awt.{Color, Font}
+    </code></pre>
+
+  On selectors we can rename members using =>
+  <pre>
+    <code>
+      import java.util.{HashMap => JavaHashMap}
+    </code></pre>
+
 <h3>Implicit Imports</h3>
+
+  Every scala program starts with:
+
+  <pre>
+    <code>
+      import java.lang._
+      import scala._
+      import Predef._
+    </code></pre>
+
+  OBS: some scala package members override the java correspondents.(Ex: StringBuilder)
