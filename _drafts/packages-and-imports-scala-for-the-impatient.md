@@ -22,7 +22,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Packages</h3>
 
-  To add items to a package, you can include them in package statements, such as:
+  To add items to a package, we can include them in package statements, such as:
   <pre>
     <code>
       package com {
@@ -42,7 +42,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
   OBS: there is no enforced relationship between the source file and the package. employee.scala doesn't have to be on com/horstmann/impatient directory.
 
-  You can contribute to more then on package in a single file.
+  we can contribute to more then on package in a single file.
 
 <h3>Scope Rules</h3>
 
@@ -121,26 +121,50 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Package Objects</h3>
 
-Packages can contain classes objects and traits, but not fuctions or variables. To address this issue we can use package objects.
+  Packages can contain classes objects and traits, but not fuctions or variables. To address this issue we can use package objects.
 
-Every package can have its package object, and it should be defined inside the parent.
+  Every package can have its package object, and it should be defined inside the parent.
 
-<pre>
-  <code>
-    package com.horstmann.impatient
-      package object people {
-        val defaultName = "John Q. Public"
+  <pre>
+    <code>
+      package com.horstmann.impatient
+        package object people {
+          val defaultName = "John Q. Public"
+        }
+        package people {
+          class Person {
+            var name = defaultName // A constant from the package
+        }
+        ...
       }
-      package people {
-        class Person {
-          var name = defaultName // A constant from the package
-      }
-      ...
-    }
-  </code></pre>
+    </code></pre>
 
 <h3>Package Visibility</h3>
+
+  We can use qualifiers to explicit the visibility of a method.
+
+  <pre>
+    <code>
+      package com.horstmann.impatient.people
+      class Person {
+        private[people] def description = "A person with name " + name
+        ...
+      }
+    </code></pre>
+
+  We can extend the visibility to an enclosing package:
+
+  <pre>
+    <code>
+      private[impatient] def description = "A person with name " + name
+    </code></pre>
+
 <h3>Imports</h3>
+
+  If we import packages, we can use shorter names instead of longer ones by bringing it into scope.(Ex: Color instead of java.awt.Color after importing it)
+
+  To import all members of a package use the wildcard ._ (Ex: import java.awt._)
+
 <h3>Imports Can Be Anywhere</h3>
 <h3>Renaming and Hiding Members</h3>
 <h3>Implicit Imports</h3>
