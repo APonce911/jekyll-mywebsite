@@ -110,30 +110,39 @@ ref: sso-intro
      https://api.authorization-server.com/1/me
    </code></pre>
 
-  <h4>Resources</h4>
-   - Really helpful blog post https://aaronparecki.com/oauth-2-simplified/
-   - https://oauth.net/2/
-   - https://www.oauth.com/
-   - Paper  https://tools.ietf.org/html/rfc7636
-   - Paper https://tools.ietf.org/html/draft-ietf-oauth-native-apps-07
-   - Ruby gem OAuth2 https://github.com/oauth-xx/oauth
+ <h3>Resources</h3>
+  - Really helpful blog post https://aaronparecki.com/oauth-2-simplified/
+  - https://oauth.net/2/
+  - https://www.oauth.com/
+  - Paper  https://tools.ietf.org/html/rfc7636
+  - Paper https://tools.ietf.org/html/draft-ietf-oauth-native-apps-07
+  - Ruby gem OAuth2 https://github.com/oauth-xx/oauth
 
 <h2>SAML</h2>
 
-In SAML SSO there are three actors:
+SAML(Security Assertion Markup Language)
+SAML is an XML-based markup language for security assertions. In SAML SSO there are three actors:
 
-- User
+- User(Principal)
 - Service Provider(SP)
 - Identity Provider (IdP)
 
-There are two different flows:
 
-1. IdP Initiated
-2. SP Initiated
+<h3>Flow</h3>
+ https://www.okta.com/sites/default/files/saml_guidance_saml_flow.png
 
-<h3>IdP Initiated</h3>
+ There are two different flows:
+
+ 1. IdP Initiated
+ 2. SP Initiated
+
+<h4>IdP Initiated</h4>
  The user will first login on the company application, there he will be redirected to the service provider app with the SAML response.
 
-<h3>SP Initiated</h3>
+<h4>SP Initiated</h4>
  The user access the service provider app on a specific address. Then the SP will request an auth request and redirect the user to the IdP to login. Once logged, the IdP sends the user back to to the SP with the SAML response.
+
+<h3>Resources</h3>
+  - https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language
+  - Ruby gem ruby-saml https://github.com/onelogin/ruby-saml
 
