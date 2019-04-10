@@ -1,6 +1,6 @@
 ---
 title: "Inheritance - Scala for the impatient"
-date: 2019-04-08 20:12:00
+date: 2019-04-10 06:50:00
 lang: en
 ref: inheritance-sfti
 
