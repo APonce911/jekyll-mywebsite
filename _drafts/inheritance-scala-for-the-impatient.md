@@ -6,11 +6,13 @@ ref: inheritance-sfti
 
 ---
 
-This is the second part of my contrubution to Gympass' Scala study group. Scala for the Impatient, chapter 8: Inheritance.
+This is the second part of my contribution to Gympass' Scala study group. Scala for the Impatient, chapter 8: Inheritance.
 
 <h2>Inheritance</h2>
 
-  We will learn how inheritance works in Scala,:
+  Inheritance is the mechanism that allows a child class to access properties( defs/ vals/ vars) of its parent classes*.( or traits/ case classes/ abstract classes etc.).
+
+  We will learn how inheritance works in Scala.
   Highlights:
 
 - The extends and final keywords are as in Java.
@@ -20,6 +22,7 @@ This is the second part of my contrubution to Gympass' Scala study group. Scala 
 
 <h3>Extending a Class</h3>
 
+
 <pre>
   <code>
     class Employee extends Person {
@@ -28,7 +31,7 @@ This is the second part of my contrubution to Gympass' Scala study group. Scala 
     }
   </code></pre>
 
-We can specify fields and methods that are new to the subclass or that override methods in the superclass.
+We can specify fields and methods that are new to the subclass or that overrides properties of the superclass.
 
 It is possible to declare class <i>final</i> so that cannot be extended. It is also possible to do this to individual methods or fields so it can't be overridden.
 
@@ -55,7 +58,7 @@ Invoking a superclass method using <i>super</i>:
   </code></pre>
 
 <h3>Type Check and Casts</h3>
-  Use <i>isInstanceOf</i> to test if an object belogs to a class or a subclass of it.
+  Use <i>isInstanceOf</i> to test if an object belongs to a class or a subclass of it.
   The method <i>asInstanceOf</i> is used to convert an object to a specific subclass.
 
   <pre>
@@ -75,7 +78,7 @@ Invoking a superclass method using <i>super</i>:
 
   However, pattern matching is usually better than using type check and casts.
 
-<h3>Protected Filds and Methods</h3>
+<h3>Protected Fields and Methods</h3>
 
   A method or field can be declared as <i>protected</i> and it can be visible only for subclasses, and not throughout the package.
 
@@ -96,11 +99,11 @@ Invoking a superclass method using <i>super</i>:
   - A <i>val</i> can override another <i>val</i> or a parameterless <i>def</i>.
   - A <i>var</i> can only override an abstract <i>var</i>.
 
-  OBS: A <i>var</i> cannt be override.If you provide a var, all subclasses will be stuck with it
+  OBS: A <i>var</i> cannot be overridden. If you provide a var, all subclasses will be stuck with it
 
 <h3>Anonymous Subclasses</h3>
 
-  An anonymous subclasse is created when you include a block with definitions or overrides.(Object with strutural type) Ex:
+  An anonymous subclass is created when you include a block with definitions or overrides. (Object with structural type) Ex:
 
   <pre>
     <code>
@@ -111,22 +114,23 @@ Invoking a superclass method using <i>super</i>:
 
 <h3>Abstract Classes</h3>
 
-  Use <i>abstract</i> to create classes that cannot be instantiated.Used when one or more methods are not defined.
+  Use <i>abstract</i> to create classes that cannot be instantiated.
+  Used when one or more methods are not defined.
 
   No <i>override</i> needed on subclasses.
 
 <h3>Abstract Fields</h3>
 
-  An abstract field is a field without initial value.
+  An abstract field is a field without an initial value.
 
   No <i>override</i> needed on subclasses.
 
-<h3>Construction Orded and Early Definitions</h3>
-  Construction order problem. Not sure when it occours...
+<h3>Construction Order and Early Definitions</h3>
+  Construction order problem. Not sure when it occurs...
 
   early definition syntax is used instead of <i>final</i> or <i>lazy</i>
 
-  You place the val fields in a block after the extends keyword:
+  You place the <i>val</i> fields in a block after the extends keyword:
 
   <pre>
     <code>
