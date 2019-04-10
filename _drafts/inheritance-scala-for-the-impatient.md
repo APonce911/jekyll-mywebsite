@@ -81,12 +81,89 @@ Invoking a superclass method using <i>super</i>:
 
 <h3>Superclass Construction</h3>
 
-
+  The primary constructor is intertwined with the class definition. The call to the superclass too.
+  <pre>
+    <code>
+      class Employee(name: String, age: Int, val salary : Double) extends Person(name, age)
+    </code></pre>
 
 <h3>Overriding Fields</h3>
+
+  You can override fields with another field with the same name.
+
+  These are the restrictions:
+  - A <i>def</i> can only override another <i>def</i>.
+  - A <i>val</i> can override another <i>val</i> or a parameterless <i>def</i>.
+  - A <i>var</i> can only override an abstract <i>var</i>.
+
+  OBS: A <i>var</i> cannt be override.If you provide a var, all subclasses will be stuck with it
+
 <h3>Anonymous Subclasses</h3>
+
+  An anonymous subclasse is created when you include a block with definitions or overrides.(Object with strutural type) Ex:
+
+  <pre>
+    <code>
+      val alien = new Person("Fred") {
+        def greeting = "Greetings, Earthling! My name is Fred."
+      }
+    </code></pre>
+
 <h3>Abstract Classes</h3>
+
+  Use <i>abstract</i> to create classes that cannot be instantiated.Used when one or more methods are not defined.
+
+  No <i>override</i> needed on subclasses.
+
 <h3>Abstract Fields</h3>
+
+  An abstract field is a field without initial value.
+
+  No <i>override</i> needed on subclasses.
+
 <h3>Construction Orded and Early Definitions</h3>
+  Construction order problem. Not sure when it occours...
+
+  early definition syntax is used instead of <i>final</i> or <i>lazy</i>
+
+  You place the val fields in a block after the extends keyword:
+
+  <pre>
+    <code>
+      class Bug extends {
+        override val range = 3
+      } with Creature
+    </code></pre>
+
 <h3>The Scala Inheritance Hierarchy</h3>
+
+  <img src="assets/images/scala_hierarchy.png" alt="Scala Classes Hierarchy Diagram" style="max-width: 38rem">
+
 <h3>Object Equality</h3>
+
+  When we write a class we should consider overriding the <i>equals</i> method to provide an accurate representation for our class.
+
+  Ex:
+
+  <pre>
+    <code>
+      Class Item(val description: String, val price: Double)
+      ...
+
+      final override def equals(other: Any) = {
+        val that = other.asInstanceOf[Item]
+        if (that == null) false
+          else description == that.description && price == that.price
+        }
+    </code></pre>
+
+  OBS: The <i>equals</i> override only works for parameters with type Any.
+
+  OBS2: Do not forget to override the <i>HashCode</i> too. Use only fields you use on equality check.
+
+  <pre>
+    <code>
+      final override def hashCode = 13 * description.hashCode + 17 * price.hashCode
+    </code></pre>
+
+  In a normal application simply use == operator.
