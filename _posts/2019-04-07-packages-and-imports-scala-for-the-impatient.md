@@ -15,7 +15,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
   - Packages nest just like inner classes.
   - Package paths are not absolute.
   - A chain x.y.z in a package clause leaves the intermediate packages x and x.y invisible.
-  - Package statements without braces at the top of the file extend to the entire file.
+  - Package statements without braces at the top of the file extends to the entire file.
   - A package object can hold functions and variables.
   - Import statements can import packages, classes, and objects.
   - Import statements can be anywhere.
@@ -195,7 +195,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       }
     </code></pre>
 
-  However, import statements are read in the order of the file, so de code below won't compile:
+  However, import statements are read in the order of the file, so the code below won't compile:
 
   <pre>
     <code>
@@ -223,9 +223,9 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       import java.util.{HashMap => JavaHashMap}
     </code></pre>
 
-  Renaming is important when you use classes with the same name from different packages, or to abreviate a name.(Ex: javal.util.Date & java.sql.Date)
+  Renaming is important when you use classes with the same name from different packages, or to abbreviate a name. (Ex: javal.util.Date & java.sql.Date)
 
-  The alternative to renaming is to use fully qualified name (package.Class) inside the code, but it's verbose.
+  The alternative to renaming is to use fully qualified names (package.Class) inside the code, but it's verbose.
 
 <h3>Implicit Imports</h3>
 
