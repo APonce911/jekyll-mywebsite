@@ -9,7 +9,8 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h2>Packages and Imports</h2>
   Packages are used to reference specific classes, objects, traits, etc.
-  Imports are used to access packages from other files.
+  Imports are used to access packages from other files and use definitions by its simple name.
+
   In this chapter, the author presents how packages and import statements work in Scala. Key Points are:
   - Packages nest just like inner classes.
   - Package paths are not absolute.
@@ -24,6 +25,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 <h3>Packages</h3>
 
   To add items to a package, we can include them in package statements, such as:
+
   <pre>
     <code>
       package com {
@@ -107,7 +109,7 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       ...
     </code></pre>
 
-  is equivalent to:
+  The package definition will extend to the entire file and is equivalent to:
 
   <pre>
     <code>
@@ -122,9 +124,9 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
 <h3>Package Objects</h3>
 
-  Packages can contain classes objects and traits, but not functions or variables. To address this issue we can use package objects.
+  Packages can contain classes objects and traits, but not methods or variables. To address this issue we can use package objects.
 
-  Every package can have its package object, and it should be defined inside the parent.
+  Every package can have its package object(only 1 per package), and it should be defined inside the parent.
 
   <pre>
     <code>
@@ -221,15 +223,19 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
       import java.util.{HashMap => JavaHashMap}
     </code></pre>
 
+  Renaming is important when you use classes with the same name from different packages, or to abreviate a name.(Ex: javal.util.Date & java.sql.Date)
+
+  The alternative to renaming is to use fully qualified name (package.Class) inside the code, but it's verbose.
+
 <h3>Implicit Imports</h3>
 
   Every Scala program starts with:
 
   <pre>
     <code>
-      import java.lang._
-      import scala._
-      import Predef._
+      import java.lang._ // String, Object, Exception
+      import scala._     // Int, Nothing, Function
+      import Predef._    // println, ???
     </code></pre>
 
   OBS: some scala package members override the java correspondents. (Ex: StringBuilder)
