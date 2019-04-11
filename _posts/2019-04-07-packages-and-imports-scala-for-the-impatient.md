@@ -8,7 +8,8 @@ ref: packages-and-imports-sfti
 This is my small contribution to Gympass' Scala study group. Scala for the impatient, chapter 7: Packages and Imports.
 
 <h2>Packages and Imports</h2>
-
+  Packages are used to reference specific classes, objects, traits, etc.
+  Imports are used to access packages from other files.
   In this chapter, the author presents how packages and import statements work in Scala. Key Points are:
   - Packages nest just like inner classes.
   - Package paths are not absolute.
@@ -169,7 +170,42 @@ This is my small contribution to Gympass' Scala study group. Scala for the impat
 
   Imports can be anywhere inside a Scala file, not only on top. The scope extends until the end of the enclosing block.
 
-  It is helpful to reduce potential conflicts.
+  It is helpful to reduce potential namespace conflicts. It also makes our code more clear and organized. Ex:
+
+  <pre>
+    <code>
+      package foo
+
+      // available to all classes defined below
+      import java.io.File
+      import java.io.PrintWriter
+
+      class Foo {
+          // only available inside this class
+          import javax.swing.JFrame
+          // ...
+      }
+
+      class Bar {
+          // only available inside this class
+          import scala.util.Random
+          // ...
+      }
+    </code></pre>
+
+  However, import statements are read in the order of the file, so de code below won't compile:
+
+  <pre>
+    <code>
+      // this doesn't work because the import is after the attempted reference
+      class ImportTests {
+          def printRandom {
+              val r = new Random   // fails
+          }
+      }
+
+      import scala.util.Random
+    </code></pre>
 
 <h3>Renaming and Hiding Members</h3>
   To import a few members from a package, we  can use a selector:
