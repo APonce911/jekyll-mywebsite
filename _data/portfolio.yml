@@ -6,22 +6,6 @@
   excerpt:
     en: "Yes, this website. Seems simple, but I had to spend some good hours doing it (especially the dual language functionality lol)! It's a bread and butter, made with love using the Jekyll framework. I also had to learn the Liquid template engine & Markdown conversion tool. "
     pt: "Sim, este website. Parece simples, mas tive que gastar umas boas horas fazendo (especialmente a funcionalidade para dois idiomas lol)! Ele é um feijão com arroz, feito com muito carinho usando o framework Jekyll. Também tive que aprender a linguagem de template Liquid & a ferramenta de conversão Markdown. "
-- js30:
-  url: "https://aponce911.github.io/javascript30/"
-  title:
-    en: "Javascript30 Challenge"
-    pt: "Desafio Javascript30"
-  excerpt:
-    en: "30 pure JavaScript challenges. by WesBos"
-    pt: "30 desafios em Javascript puro. por WesBos"
-- API-Banfox:
-  url: "https://github.com/APonce911/api-documents-app"
-  title:
-    en: "Microservice API"
-    pt: "RestAPI de microserviço"
-  excerpt:
-    en: "A Ruby on Rails microservice Rest API to organize contracts and request digital signatures using ClickSign."
-    pt: "Uma  Rest API de microserviço feita em Ruby on Rails para organizar contratos e solicitar assinaturas digitais pelo Clicksign."
 - MapaPaladar:
   url: "https://www.mapapaladar.com"
   title:
@@ -30,3 +14,19 @@
   excerpt:
     en: "What about finding the best Instagram gastronomy posts on a single map? On mapapaladar.com we can access our Instagram information, share our posts and view tasty gastronomy tips of our IG friends. (Limited access to Instagram - Sandbox Mode); Please get in touch for more information."
     pt: "Que tal encontrar os melhores posts de gastronomia em um único mapa? No mapapaladar.com nós acessamos nossas informações do instagram, compartilhamos nossos posts e vemos as melhores dicas gastronomicas dos nossos amigos do IG.(Acesso limitado ao Instagram - Modo Sandbox); Entre em contato para solicitar login e senha de acesso."
+- API-Banfox:
+  url: "https://github.com/APonce911/api-documents-app"
+  title:
+    en: "Microservice API"
+    pt: "RestAPI de microserviço"
+  excerpt:
+    en: "A Ruby on Rails microservice Rest API to organize contracts and request digital signatures using ClickSign."
+    pt: "Uma  Rest API de microserviço feita em Ruby on Rails para organizar contratos e solicitar assinaturas digitais pelo Clicksign."
+- js30:
+  url: "https://aponce911.github.io/javascript30/"
+  title:
+    en: "Javascript30 Challenge"
+    pt: "Desafio Javascript30"
+  excerpt:
+    en: "30 pure JavaScript challenges. by WesBos"
+    pt: "30 desafios em Javascript puro. por WesBos"
