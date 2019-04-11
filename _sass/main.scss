@@ -106,10 +106,13 @@ a:hover{
   padding-bottom: 3px;
   box-shadow: inset 0px -2px $light-green;
 }
+.img-lg {
+  max-width: 100%;
+}
 
 @media (min-width: 38rem) {
   .container {
-      padding: 3rem 1rem;
+    padding: 3rem 1rem;
   }
   ul{
     -webkit-padding-start: 40px;

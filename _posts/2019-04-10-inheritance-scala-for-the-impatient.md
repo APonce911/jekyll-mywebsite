@@ -141,7 +141,7 @@ Invoking a superclass method using <i>super</i>:
 
 <h3>The Scala Inheritance Hierarchy</h3>
 
-  <img src="assets/images/scala_hierarchy.png" alt="Scala Classes Hierarchy Diagram" style="max-width: 38rem">
+  <img src="assets/images/scala_hierarchy.png" alt="Scala Classes Hierarchy Diagram" class="img-lg">
 
 <h3>Object Equality</h3>
 
