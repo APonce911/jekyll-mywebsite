@@ -38,3 +38,18 @@ to verify if the fuction is tail recursive use the following line above your fun
 @tailrec
 
 
+<h3>Call by name & call by value</h3>
+Call by name and call by value are two types of argument evaluation.
+
+Call by name, delays the evaluation of the expression passed as an argument, and is evaluated only when called.
+Call by value, evaluate the argument before executing the function, and remain constant during the execution.
+
+Example
+
+def calledByValue(x: Long): Unit = {
+  ...
+}
+
+def calledByName(x: => Long): Unit = {
+  ...
+}
