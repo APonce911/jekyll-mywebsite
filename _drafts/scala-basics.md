@@ -53,3 +53,16 @@ def calledByValue(x: Long): Unit = {
 def calledByName(x: => Long): Unit = {
   ...
 }
+
+<h3>Detault Arguments</h3>
+
+We can pass default values for parameters, so we can maintain the function signature clean.
+Used when the function is called with the same paramenters most of the time.
+
+Example
+
+def savePicture(format: String = 'jpg', width: Int, height: Int)
+
+Use the paramenter name + '=' when you have more than one parameter with default value.
+
+
