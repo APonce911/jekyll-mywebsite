@@ -13,3 +13,23 @@ Signature means number of aparameters, or parameters with different types. It ca
 
 Is a method overloading for the parent method, implemented with different signature.
 Auxiliary constructors can be exchanged by default values on the class constructor 
+
+<h3>Syntatic Sugar: Method Notations</h3>
+
+Infix notation
+Methods with one parameter can be called this way:
+
+mary.likes("Inception") === mary likes "Inception"
+
+Operators (Ex: +) are equivalento to methods called with Infix notation
+Unary operations(-1), are equivalento to methods called with Prefix notation.
+
+-1 === 1.unary_-
+
+Methods without parameters can be called with Postfix Notation
+
+airton.isStudying === airton isStudying
+
+Calling an instance as an function, is the same calling the apply method.
+
+airton() ===  airton.apply()
