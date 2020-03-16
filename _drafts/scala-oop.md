@@ -33,3 +33,10 @@ airton.isStudying === airton isStudying
 Calling an instance as an function, is the same calling the apply method.
 
 airton() ===  airton.apply()
+
+<h3>Scala Objects</h3>
+
+You can have Java's class level funcionality (methods called on the class, not on an instance of the class) using objects on Scala.
+A Scala object is a definition af a type, and it's the only instance of that type (Singleton)
+
+Companions: a Scala class with a Scala object on the same scope with the same name
