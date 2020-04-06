@@ -40,3 +40,11 @@ You can have Java's class level funcionality (methods called on the class, not o
 A Scala object is a definition af a type, and it's the only instance of that type (Singleton)
 
 Companions: a Scala class with a Scala object on the same scope with the same name
+
+<h3>Inheritance</h3>
+
+Single class inheritance - one class can only extend a single class
+private methods - allows use only on the parent class
+protected methods - allows use on subclasses
+public methods - anyone can access the method
+When extending a class, you must specify the correct constructors.
