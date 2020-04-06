@@ -11,7 +11,7 @@ Signature means number of aparameters, or parameters with different types. It ca
 
 <h3>Auxiliary constructors</h3>
 
-Is a method overloading for the parent method, implemented with different signature.
+Is a method overloading for the parent method(apply or this), implemented with different signature.
 Auxiliary constructors can be exchanged by default values on the class constructor 
 
 <h3>Syntatic Sugar: Method Notations</h3>
@@ -48,3 +48,12 @@ private methods - allows use only on the parent class
 protected methods - allows use on subclasses
 public methods - anyone can access the method
 When extending a class, you must specify the correct constructors.
+
+Polimorphysm
+a method call will use the most overwritten version of a method.
+EX Animal - Dog eat methods
+
+overRiDING vs overLoading
+
+overRiding: Supplying different implementation on derived classes
+overLoading: Supplying multiple names with same name on the same class, but different signatures
