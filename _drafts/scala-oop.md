@@ -68,3 +68,8 @@ prevent derived classes to inherit
 Sealed
 Can be extended on THIS file, and prevent on other files.
 
+Abstract members
+When you leave classes / methods / fields unimplemented
+
+Traits
+Like abstract classes, can have unimplemented fields and methods, but can be inherited along classes.
