@@ -55,5 +55,16 @@ EX Animal - Dog eat methods
 
 overRiDING vs overLoading
 
-overRiding: Supplying different implementation on derived classes
-overLoading: Supplying multiple names with same name on the same class, but different signatures
+overRiding: Supplying different implementation on derived classes. Can be implemented on constructor or on the body of derived classes
+overLoading: Supplying multiple names with same name on the same class, but different signatures.
+
+Super
+call methods in the super(parent) class
+
+Final
+prevent derived classes to override method/var
+prevent derived classes to inherit
+
+Sealed
+Can be extended on THIS file, and prevent on other files.
+
