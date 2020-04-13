@@ -73,3 +73,6 @@ When you leave classes / methods / fields unimplemented
 
 Traits
 Like abstract classes, can have unimplemented fields and methods, but can be inherited along classes.
+They do not have constructors.
+Multiple traits may be inherited by the same class.
+Use Traits = behavior, absctract class is a type of "thing"
