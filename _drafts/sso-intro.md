@@ -109,7 +109,14 @@ ref: sso-intro
      curl -H "Authorization: Bearer RsT5OjbzRn430zqMLgV3Ia" \
      https://api.authorization-server.com/1/me
    </code></pre>
-
+  
+  <h4>Basic Sumary</h4>
+  
+    Step              | Request Data                    | Response data
+    auth request      | client_id,client_secret, scope  | auth_code
+    token request     | auth_code                       | access_token
+    user info request | access_token                    | user_info_json  
+    
  <h3>Resources</h3>
   - Really helpful blog post https://aaronparecki.com/oauth-2-simplified/
   - https://oauth.net/2/
