@@ -76,3 +76,23 @@ Like abstract classes, can have unimplemented fields and methods, but can be inh
 They do not have constructors.
 Multiple traits may be inherited by the same class.
 Use Traits = behavior, absctract class is a type of "thing"
+
+<h3>Generics</h3>
+
+Generic class
+MyList[A]
+Generic Method
+def empty[A]: MyList[A] = ???
+
+Variance
+
+Covariance 
+A sibling child can substitute a class
+
+Invariance
+A class cannot be substituted by other type, neither parent or sibling
+
+Contravariance
+A parent class can substitute a child
+
+Bounded types
