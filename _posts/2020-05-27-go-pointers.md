@@ -78,4 +78,4 @@ Example
 <h2>Source</h2>
 
 https://tour.golang.org/moretypes/1
-http://www.golangbootcamp.com/book/methods#:~:text=A%20method%20is%20a%20function,Go%20does%20not%20have%20classes.&text=The%20method%20receiver%20appears%20in,keyword%20and%20the%20method%20name.
+http://www.golangbootcamp.com/book/methods
