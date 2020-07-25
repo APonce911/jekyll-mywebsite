@@ -32,6 +32,7 @@ Ex: p is a pointer, n is not
 
 <h2>Method Receiver</h2>
 Methods vs Functions
+
 In OOP a method is a function on an instance of an object. In go, we can declare methods on structs.
 
 The method receiver is the type/struct that will be able to receive a specific method call. It is declared between de func keyword and the function name.
