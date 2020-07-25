@@ -17,16 +17,16 @@
 - API-Banfox:
   url: "https://github.com/APonce911/api-documents-app"
   title:
-    en: "Microservice API"
-    pt: "RestAPI de microserviço"
+    en: "Clicksign API"
+    pt: "Clicksign API"
   excerpt:
-    en: "A Ruby on Rails microservice Rest API to organize contracts and request digital signatures using ClickSign."
-    pt: "Uma  Rest API de microserviço feita em Ruby on Rails para organizar contratos e solicitar assinaturas digitais pelo Clicksign."
+    en: "A Ruby on Rails microservice API to organize contracts and request digital signatures using ClickSign."
+    pt: "Uma microserviço de uma API feita em Ruby on Rails para organizar contratos e solicitar assinaturas digitais pelo Clicksign."
 - js30:
   url: "https://aponce911.github.io/javascript30/"
   title:
-    en: "Javascript30 Challenge"
-    pt: "Desafio Javascript30"
+    en: "Javascript30 Challenge by WesBos"
+    pt: "Desafio Javascript30 por WesBos"
   excerpt:
-    en: "30 pure JavaScript challenges. by WesBos"
-    pt: "30 desafios em Javascript puro. por WesBos"
+    en: "Some JavaScript challenges."
+    pt: "Alguns desafios em Javascript puro."
