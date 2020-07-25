@@ -7,13 +7,13 @@
     en: "Yes, this website. Seems simple, but I had to spend some good hours doing it (especially the dual language functionality lol)! It's a bread and butter, made with love using the Jekyll framework. I also had to learn the Liquid template engine & Markdown conversion tool. "
     pt: "Sim, este website. Parece simples, mas tive que gastar umas boas horas fazendo (especialmente a funcionalidade para dois idiomas lol)! Ele é um feijão com arroz, feito com muito carinho usando o framework Jekyll. Também tive que aprender a linguagem de template Liquid & a ferramenta de conversão Markdown. "
 - MapaPaladar:
-  url: "https://www.mapapaladar.com"
+  url: "https://youtu.be/PYSWW6oM780?t=1459"
   title:
-    en: "mapapaladar.com"
-    pt: "mapapaladar.com"
+    en: "Mapa Paladar"
+    pt: "Mapa Paladar"
   excerpt:
-    en: "What about finding the best Instagram gastronomy posts on a single map? On mapapaladar.com we can access our Instagram information, share our posts and view tasty gastronomy tips of our IG friends. (Limited access to Instagram - Sandbox Mode); Please get in touch for more information."
-    pt: "Que tal encontrar os melhores posts de gastronomia em um único mapa? No mapapaladar.com nós acessamos nossas informações do instagram, compartilhamos nossos posts e vemos as melhores dicas gastronomicas dos nossos amigos do IG.(Acesso limitado ao Instagram - Modo Sandbox); Entre em contato para solicitar login e senha de acesso."
+    en: "What about finding the best Instagram gastronomy posts on a single map? On Mapa Paladar we can access our Instagram information, share our posts and view tasty gastronomy tips of our IG friends. It's a Ruby on Rails + Javascript web app, with Instagram, Google Maps and Google Places API's integrations."
+    pt: "Que tal encontrar os melhores posts de gastronomia em um único mapa? No Mapa Paladar nós acessamos nossas informações do instagram, compartilhamos nossos posts e vemos as melhores dicas gastronomicas dos nossos amigos do IG. É um web app em Ruby on Rails + Javascript, com integrações por API com Instagram, Google Maps e Google Places."
 - API-Banfox:
   url: "https://github.com/APonce911/api-documents-app"
   title:
