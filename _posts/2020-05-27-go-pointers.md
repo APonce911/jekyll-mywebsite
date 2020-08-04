@@ -28,6 +28,10 @@ Ex: p is a pointer, n is not
       fmt.Println(j)
       fmt.Println(n)
     }
+    // $ 42
+    // $ 21
+    // $ 15
+    // $ 3
    </code></pre>
 
 <h2>Method Receiver</h2>
@@ -45,14 +49,17 @@ Example
       FirstName, LastName string
     }
 
+    func main() {
+      u := User{"Roberto", "Barros"}
+
+      fmt.Println(u.Greeting())
+    }
+
     func (u User) Greeting() string {
       return fmt.Sprintf("Dear %s %s", u.FirstName, u.LastName)
     }
 
-    func GreetUser() {
-      u := User{"Matt", "Aimonetti"}
-      fmt.Println(u.Greeting())
-    }
+    // $ Dear Roberto Barros
    </code></pre>
 
 <h2>Pointer Receiver</h2>
@@ -65,17 +72,40 @@ Example
   <pre>
    <code>
     ...
+
+    func main() {
+      u := &User{"Roberto", "Barros"}
+
+      fmt.Println(u.Greeting())
+    }
+
     func (u *User) Greeting() string {
       return fmt.Sprintf("Dear %s %s", u.FirstName, u.LastName)
     }
 
-    func GreetUser() {
-      u := &User{"Matt", "Aimonetti"}
-    }
+    // $ Dear Roberto Barros
    </code></pre>
   
   Another reason to assign a method to a pointer, is that the method can then modify the value that its receiver points to.
   
+  <pre>
+   <code>
+    ...
+
+    func main() {
+      u := &User{"Roberto", "Barros"}
+      u.updateFirstName("Carlos")
+
+      fmt.Println(u.FirstName)
+    }
+
+    func (u *User) updateFirstName(newFirstName string) {
+      u.FirstName = newFirstName
+    }
+
+    // $ Carlos
+   </code></pre>
+
 <h2>Source</h2>
 
 https://tour.golang.org/moretypes/1
