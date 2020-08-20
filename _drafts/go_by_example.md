@@ -14,7 +14,7 @@ Go has various value types including strings, integers, floats, booleans, etc.
 
 Constant
 
-A numeric constant has no tyoe until it's given one, such as an explicit conversion
+A numeric constant has no type until it's given one, such as an explicit conversion
 
 For is the only looping construct
 
@@ -58,5 +58,15 @@ Skip the current iteration with 'continue'
         }
         fmt.Println(n)
     }
-  }
+  </code></pre>
+
+For with slice as range 
+
+  <pre>
+   <code>
+    stringSlice := []string{"foo","bar"}
+    
+    for _,word := range stringSlice {
+      fmt.Println(word)
+    }
   </code></pre>
